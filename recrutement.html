@@ -232,4 +232,185 @@
 
             <div class="timeline-step">
                 <div class="timeline-number">4</div>
-                <h3>Entretien
+                <h3>Entretien Technique</h3>
+                <p>Rencontre avec le manager et étude de cas pratique</p>
+                <span class="timeline-duration">J+21</span>
+            </div>
+
+            <div class="timeline-step">
+                <div class="timeline-number">5</div>
+                <h3>Proposition</h3>
+                <p>Si le profil correspond, proposition de contrat sous 48h</p>
+                <span class="timeline-duration">J+25</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="jobs-application" id="application-form">
+        <h2>Postuler</h2>
+        <p class="section-subtitle">Remplissez le formulaire ci-dessous pour candidater</p>
+
+        <form class="application-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telephone">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="poste">Poste visé *</label>
+                <select id="poste" name="poste" required>
+                    <option value="">Sélectionnez un poste</option>
+                    <option value="gestionnaire">Gestionnaire Locatif (H/F)</option>
+                    <option value="valorisation">Chargé(e) de Valorisation Immobilière</option>
+                    <option value="commercial">Assistant(e) Commercial(e)</option>
+                    <option value="spontanee">Candidature Spontanée</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cv">CV (PDF, max 5Mo) *</label>
+                <input type="file" id="cv" name="cv" accept=".pdf" required>
+                <p class="form-help">Format accepté : PDF uniquement</p>
+            </div>
+
+            <div class="form-group">
+                <label for="lettre">Lettre de motivation (optionnel)</label>
+                <input type="file" id="lettre" name="lettre" accept=".pdf">
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pourquoi Pilotimmo ? *</label>
+                <textarea id="message" name="message" required placeholder="Expliquez-nous en quelques lignes ce qui vous motive à nous rejoindre..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="disponibilite">Disponibilité</label>
+                <select id="disponibilite" name="disponibilite">
+                    <option value="">Sélectionnez votre disponibilité</option>
+                    <option value="immediate">Immédiate</option>
+                    <option value="1mois">Sous 1 mois</option>
+                    <option value="2mois">Sous 2 mois</option>
+                    <option value="3mois">Sous 3 mois ou plus</option>
+                </select>
+            </div>
+
+            <div class="form-checkbox">
+                <input type="checkbox" id="rgpd" name="rgpd" required>
+                <label for="rgpd">J'accepte que mes données personnelles soient traitées dans le cadre de ma candidature conformément à notre <a href="mentions-legales.html">politique de confidentialité</a> *</label>
+            </div>
+
+            <button type="submit" class="submit-button">Envoyer ma Candidature</button>
+        </form>
+    </section>
+
+    <section class="jobs-culture">
+        <h2>La Vie chez Pilotimmo</h2>
+        <div class="culture-grid">
+            <div class="culture-card">
+                <h3>🎉 Événements d'Équipe</h3>
+                <p>Séminaires annuels, afterworks, team buildings pour renforcer la cohésion</p>
+            </div>
+
+            <div class="culture-card">
+                <h3>💻 Outils Modernes</h3>
+                <p>HubSpot, Airtable, Softr, WhatsApp Business - stack tech à jour</p>
+            </div>
+
+            <div class="culture-card">
+                <h3>🌴 Congés</h3>
+                <p>25 jours + RTT selon profil + journées enfant malade</p>
+            </div>
+
+            <div class="culture-card">
+                <h3>🎓 Formation</h3>
+                <p>Budget formation annuel + accès à des plateformes e-learning</p>
+            </div>
+
+            <div class="culture-card">
+                <h3>🏢 Locaux</h3>
+                <p>Bureaux modernes et agréables au cœur de Lyon avec espaces détente</p>
+            </div>
+
+            <div class="culture-card">
+                <h3>🚀 Innovation</h3>
+                <p>Liberté de proposer et tester de nouvelles idées</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>PILOTIMMO</h4>
+                <p>Expert en valorisation et gestion de patrimoine locatif</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="partenaires.html">Partenaires</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cgu.html">CGU</a></li>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email : contact@pilotimmo.fr</p>
+                <p>Tél : 01 XX XX XX XX</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Facebook">f</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pilotimmo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function scrollToForm() {
+            document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.querySelector('.application-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Merci pour votre candidature ! Nous revenons vers vous sous 7 jours maximum.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
