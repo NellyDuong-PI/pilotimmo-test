@@ -3,75 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services — Pilotimmo</title>
-  <meta name="description" content="Pilotimmo — Experts en biens complexes : audit, travaux, successions, recouvrement et remise en location." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Pilotimmo — Nos Services</title>
+  <meta name="description" content="Pilotimmo — Experts en biens complexes. Diagnostic gratuit, gestion patrimoniale, rénovation, recouvrement." />
+  <link rel="stylesheet" href="/assets/css/services.css">
 </head>
 <body>
-  <header class="header" role="banner">
-    <div class="nav-container">
-      <a class="logo" href="index.html">Pilotimmo</a>
+  <!-- Header -->
+  <header class="site-header" role="banner" aria-label="En-tête du site Pilotimmo">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Aller à l'accueil Pilotimmo">
+        <!-- Remplacez par votre logo image si disponible -->
+        <img src="/assets/images/logo-pilotimmo.svg" alt="Pilotimmo" class="brand-logo" />
+      </a>
 
-      <nav role="navigation" aria-label="Navigation principale">
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/services" aria-current="page">Services</a></li>
+          <li><a href="/equipe">Équipe</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
 
-      <button class="mobile-menu-btn" aria-controls="main-nav" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+      <a class="btn btn-ghost" href="#contact">Diagnostic Gratuit</a>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 id="hero-title">Nos Services</h1>
-          <h2 class="highlight">Experts en Biens Complexes</h2>
-          <p class="hero-description">Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
-
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-            <a class="btn btn-primary btn-lg" href="#contact">Diagnostic Gratuit</a>
-            <a class="btn" href="#contact" style="background:none;border:2px solid rgba(255,255,255,0.12);color:var(--white)">Nous Contacter</a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Biens Piloté</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">95%</div>
-              <div class="stat-label">Taux de Satisfaction</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">10 ans</div>
-              <div class="stat-label">D'Expérience</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <!-- Placeholder visual: adapt or replace by an illustration/image -->
-          <div class="floating-cards" style="height:320px;">
-            <div class="floating-card" style="--delay:0s; width:180px;">
-              <strong>Audit</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Diagnostic et recommandations</div>
-            </div>
-            <div class="floating-card" style="--delay:0.6s; width:200px;">
-              <strong>Travaux</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Coordination complète</div>
-            </div>
-            <div class="floating-card" style="--delay:1.2s; width:160px;">
-              <strong>Suivi</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Reporting régulier</div>
-            </div>
-          </div>
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero hero--light" aria-labelledby="hero-title" role="region">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 id="hero-title" class="hero-eyebrow">Nos Services</h1>
+        <h2 class="hero-title">Experts en Biens Complexes</h2>
+        <p class="hero-text">
+          Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Diagnostic Gratuit</a>
         </div>
       </div>
     </section>
 
+    <!-- Solutions (Process & Méthode) -->
     <!-- SOLUTIONS -->
     <section class="section section-light" aria-labelledby="solutions-title">
       <div class="container">
@@ -81,9 +55,9 @@
         <p class="section-subtitle">Quatre domaines d'expertise pour gérer les situations les plus complexes</p>
 
         <div class="grid grid-4">
-          <article class="service-card card card-hover">
-            <div class="service-icon">⚡</div>
-            <h3 class="service-title">Passoires Énergétiques</h3>
+          <article class="service-card card card-hover" aria-labelledby="srv1-title">
+            <div class="service-icon" aria-hidden="true">⚡</div>
+            <h3 id="srv1-title" class="service-title">Passoires Énergétiques</h3>
             <p>Transformez vos biens énergivores en logements performants et conformes aux nouvelles normes DPE.</p>
             <ul class="service-list" aria-label="Services Passoires Énergétiques">
               <li>Audit énergétique complet</li>
@@ -94,9 +68,9 @@
             <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
           </article>
 
-          <article class="service-card card card-hover">
-            <div class="service-icon">🏚️</div>
-            <h3 class="service-title">Biens Vacants</h3>
+          <article class="service-card card card-hover" aria-labelledby="srv2-title">
+            <div class="service-icon" aria-hidden="true">🏚️</div>
+            <h3 id="srv2-title" class="service-title">Biens Vacants</h3>
             <p>Remettez en location vos biens inoccupés et maximisez votre rentabilité locative rapidement.</p>
             <ul class="service-list" aria-label="Services Biens Vacants">
               <li>Diagnostic et remise en état</li>
@@ -107,9 +81,9 @@
             <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
           </article>
 
-          <article class="service-card card card-hover">
-            <div class="service-icon">⚖️</div>
-            <h3 class="service-title">Successions & Héritages</h3>
+          <article class="service-card card card-hover" aria-labelledby="srv3-title">
+            <div class="service-icon" aria-hidden="true">⚖️</div>
+            <h3 id="srv3-title" class="service-title">Successions & Héritages</h3>
             <p>Accompagnement complet dans la gestion patrimoniale de biens issus de successions complexes.</p>
             <ul class="service-list" aria-label="Services Successions & Héritages">
               <li>Évaluation patrimoniale</li>
@@ -120,9 +94,9 @@
             <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
           </article>
 
-          <article class="service-card card card-hover">
-            <div class="service-icon">📥</div>
-            <h3 class="service-title">Charges Impayées</h3>
+          <article class="service-card card card-hover" aria-labelledby="srv4-title">
+            <div class="service-icon" aria-hidden="true">📥</div>
+            <h3 id="srv4-title" class="service-title">Charges Impayées</h3>
             <p>Solutions efficaces pour le recouvrement et la prévention des impayés de loyers et charges.</p>
             <ul class="service-list" aria-label="Services Charges Impayées">
               <li>Recouvrement amiable</li>
@@ -136,89 +110,131 @@
       </div>
     </section>
 
-    <!-- PROCESS / METHODE -->
-    <section class="section" aria-labelledby="methode-title">
+    <!-- Notre Méthode -->
+    <section class="section section-white" aria-labelledby="method-title">
       <div class="container">
         <div class="section-title">
-          <h2 id="methode-title">Notre Méthode</h2>
+          <h2 id="method-title">Notre Méthode</h2>
+          <p class="section-subtitle">Un Accompagnement Complet — De l'analyse initiale à l'optimisation continue de votre patrimoine</p>
         </div>
-        <p class="section-subtitle">Un Accompagnement Complet — De l'analyse initiale à l'optimisation continue de votre patrimoine</p>
 
-        <div class="process">
-          <div class="process-line" aria-hidden="true"></div>
-          <div class="grid grid-3" style="align-items:start;">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <h3 class="step-title">Diagnostic Initial</h3>
-              <p class="step-text">Analyse complète de votre situation patrimoniale</p>
-            </div>
+        <div class="grid grid-4 method-grid" role="list">
+          <div class="method-step card" role="listitem">
+            <div class="step-number">1</div>
+            <h3>Diagnostic Initial</h3>
+            <p>Analyse complète de votre situation patrimoniale</p>
+          </div>
 
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <h3 class="step-title">Stratégie Sur Mesure</h3>
-              <p class="step-text">Plan d'action personnalisé selon vos objectifs</p>
-            </div>
+          <div class="method-step card" role="listitem">
+            <div class="step-number">2</div>
+            <h3>Stratégie Sur Mesure</h3>
+            <p>Plan d'action personnalisé selon vos objectifs</p>
+          </div>
 
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <h3 class="step-title">Mise en Œuvre & Suivi</h3>
-              <p class="step-text">Gestion opérationnelle de A à Z et reporting continu</p>
-            </div>
+          <div class="method-step card" role="listitem">
+            <div class="step-number">3</div>
+            <h3>Mise en Œuvre</h3>
+            <p>Gestion opérationnelle de A à Z</p>
+          </div>
+
+          <div class="method-step card" role="listitem">
+            <div class="step-number">4</div>
+            <h3>Suivi & Optimisation</h3>
+            <p>Accompagnement continu et reporting régulier</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section" aria-labelledby="contact-title">
-      <div class="container text-center">
-        <h2 id="contact-title" class="cta-title">Prêt à valoriser votre patrimoine ?</h2>
-        <p class="cta-text">Contactez-nous pour un diagnostic gratuit et personnalisé de votre situation.</p>
-        <a class="btn btn-primary btn-lg" href="mailto:contact@pilotimmo.example">Contactez-nous</a>
+    <!-- Indicateurs -->
+    <section class="section section-accent" aria-labelledby="stats-title">
+      <div class="container stats">
+        <h2 id="stats-title" class="visually-hidden">Indicateurs Pilotimmo</h2>
+        <div class="grid grid-3 stats-grid" role="list">
+          <div class="stat card" role="listitem">
+            <div class="stat-number" data-target="50">0</div>
+            <div class="stat-label">Biens Gérés</div>
+          </div>
+
+          <div class="stat card" role="listitem">
+            <div class="stat-number" data-target="95">0</div>
+            <div class="stat-label">Taux de Satisfaction (%)</div>
+          </div>
+
+          <div class="stat card" role="listitem">
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Années d'Expérience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final + formulaire HubSpot -->
+    <section class="section section-white cta-section" aria-labelledby="cta-title" id="contact">
+      <div class="container cta-inner">
+        <div class="cta-copy">
+          <h2 id="cta-title">Prêt à Optimiser Votre Patrimoine ?</h2>
+          <p>Bénéficiez d'un diagnostic gratuit et personnalisé de votre situation patrimoniale</p>
+          <p class="muted">Complétez le formulaire pour que l'un de nos experts vous contacte.</p>
+        </div>
+
+        <div class="cta-form">
+          <!-- HubSpot / autre formulaire : insérer le script HubSpot fourni par votre compte.
+               Exemple (remplacer portalId et formId) :
+               <script src="https://js.hsforms.net/forms/v2.js"></script>
+               <script>
+                 hbspt.forms.create({
+                   region: "na1",
+                   portalId: "YOUR_PORTAL_ID",
+                   formId: "YOUR_FORM_ID",
+                   target: "#hubspot-form"
+                 });
+               </script>
+          -->
+          <div id="hubspot-form" aria-live="polite">
+            <!-- Placeholder : le formulaire HubSpot apparaîtra ici après insertion du script. -->
+            <noscript>
+              <p>Veuillez activer JavaScript pour afficher le formulaire de contact.</p>
+            </noscript>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <div class="footer-content">
-      <div>
-        <h4 class="footer-title">Pilotimmo</h4>
-        <p class="footer-text">Gestion de patrimoine locatif spécialisé en biens complexes.</p>
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo" aria-label="Pied de page Pilotimmo">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <a class="brand footer-brand" href="/" aria-label="Pilotimmo retour accueil">
+          <img src="/assets/images/logo-pilotimmo-footer.svg" alt="Pilotimmo" />
+        </a>
+        <p>Pilotimmo — Experts en biens complexes. Contactez-nous pour un diagnostic gratuit.</p>
       </div>
 
-      <div>
-        <h4 class="footer-title">Navigation</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Tél. : 01 23 45 67 89</p>
+        <p>Email : contact@pilotimmo.example</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/mentions">Mentions légales</a></li>
+          <li><a href="/confidentialite">Politique de confidentialité</a></li>
         </ul>
-      </div>
-
-      <div>
-        <h4 class="footer-title">Contact</h4>
-        <p class="footer-text">contact@pilotimmo.example</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      © <span id="year"></span> Pilotimmo — Tous droits réservés
+      <div class="container">
+        <small>© <span id="year"></span> Pilotimmo — Tous droits réservés</small>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Année automatique
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Toggle mobile nav (affiche/masque .nav-links en mobile)
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    if (mobileBtn && navLinks) {
-      mobileBtn.addEventListener('click', () => {
-        const open = navLinks.classList.toggle('open');
-        mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-  </script>
+  <script src="/assets/js/services.js" defer></script>
 </body>
 </html>
