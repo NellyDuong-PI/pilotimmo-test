@@ -2,14 +2,13 @@
 :root{
   --color-bg: #ffffff;
   --color-ink: #1b1b1b;
-  --color-accent: #0a66c2; /* ajuster selon charte */
+  --color-accent: #0a66c2;
   --color-muted: #6b7280;
   --color-card: #ffffff;
   --radius: 10px;
   --container-max: 1100px;
-
-  /* hero background path (mettez ici le chemin de l'image claire du projet) */
   --hero-bg: url("/assets/images/hero-services.jpg");
+  --header-height: 64px;
 }
 
 /* Reset & base */
@@ -24,6 +23,7 @@ body{
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
   font-size:16px;
+  padding-top: var(--header-height); /* évite que le header fixe recouvre le contenu */
 }
 
 .container{
@@ -40,24 +40,30 @@ body{
   clip:rect(1px,1px,1px,1px);white-space:nowrap;
 }
 
-/* Header */
+/* Header - forcé en fixed pour garantir visibilité */
 .site-header{
-  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
-  position:sticky;
+  background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.95));
+  position:fixed;
   top:0;
-  z-index:40;
+  left:0;
+  right:0;
+  height:var(--header-height);
+  z-index:9999; /* très élevé pour être sûr d'être au-dessus */
   border-bottom:1px solid rgba(16,24,40,0.04);
+  display:flex;
+  align-items:center;
 }
 .header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:1rem;
-  padding:0.75rem 0;
+  width:100%;
+  padding:0 1rem;
 }
 .brand{display:flex;align-items:center;text-decoration:none}
 .brand-logo{height:36px}
-.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
 .main-nav a{color:var(--color-ink);text-decoration:none;padding:0.5rem;border-radius:6px}
 .main-nav a:hover{background:rgba(10,102,194,0.06)}
 .btn{display:inline-block;padding:0.5rem 1rem;border-radius:8px;border:1px solid transparent;text-decoration:none;color:var(--color-ink);background:transparent}
@@ -73,6 +79,7 @@ body{
   align-items:center;
   color:#0b1220;
   overflow:hidden;
+  z-index:0; /* s'assurer que le hero ne recouvre pas le header */
 }
 .hero::before{
   content:"";
@@ -160,7 +167,14 @@ body{
 }
 
 /* Footer */
-.site-footer{background:#0b1220;color:#fff;margin-top:2rem;padding-top:2rem}
+.site-footer{
+  background:#0b1220;
+  color:#fff;
+  margin-top:2rem;
+  padding-top:2rem;
+  position:relative;
+  z-index:50; /* doit être au-dessus de contenu si nécessaire */
+}
 .footer-inner{display:flex;gap:2rem;align-items:flex-start;justify-content:space-between;padding:1rem 0}
 .footer-col{flex:1}
 .footer-col h4{margin:0 0 0.5rem}
@@ -170,8 +184,9 @@ body{
 
 /* Small screens */
 @media (max-width:700px){
-  .header-inner{padding:0.5rem 0}
-  .main-nav ul{display:none} /* simplification : remplacez par menu mobile si nécessaire */
+  .header-inner{padding:0 0.75rem}
+  /* Afficher la nav en mode responsive plutôt que la masquer */
+  .main-nav ul{display:flex;flex-direction:row;gap:0.5rem;overflow:auto}
   .hero-title{font-size:1.5rem}
   .hero-text{font-size:1rem}
   .method-grid{grid-template-columns:1fr}
