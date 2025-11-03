@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Pilotimmo</title>
+  <meta name="description" content="Pilotimmo — Gestion de patrimoine locatif : gestion locative, optimisation fiscale, conseils à l'acquisition et accompagnement travaux." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Pilotimmo</a>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <a href="#contact" class="btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero small-hero">
+      <div class="container">
+        <h1>Nos services</h1>
+        <p class="lead">Accompagnement complet pour votre patrimoine locatif : de l'acquisition à la gestion quotidienne, Pilotimmo vous pilote vers la performance.</p>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h2>Ce que nous faisons</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Gestion locative</h3>
+          <p>Prise en charge complète des relations avec les locataires, encaissement des loyers, états des lieux, relances et mise en place d'assurances locatives.</p>
+          <a class="btn" href="#contact">Demander une démo</a>
+        </article>
+
+        <article class="card">
+          <h3>Optimisation fiscale & comptable</h3>
+          <p>Conseils pour optimiser la fiscalité de vos biens (régime réel, micro-foncier, LMNP/LMP) et gestion comptable dédiée.</p>
+          <a class="btn" href="#contact">En savoir plus</a>
+        </article>
+
+        <article class="card">
+          <h3>Conseil à l'acquisition</h3>
+          <p>Analyse de projet, sélection de biens, simulations de rentabilité et accompagnement lors des négociations.</p>
+          <a class="btn" href="#contact">Je veux un audit</a>
+        </article>
+
+        <article class="card">
+          <h3>Mise en valeur & travaux</h3>
+          <p>Coordination des travaux, optimisation des aménagements pour augmenter la valeur locative et choisir les matériaux efficaces.</p>
+          <a class="btn" href="#contact">Obtenir un chiffrage</a>
+        </article>
+
+        <article class="card">
+          <h3>Reporting & pilotage</h3>
+          <p>Tableaux de bord personnalisés : suivi des loyers, vacance, charges, performance patrimoniale et alertes automatisées.</p>
+          <a class="btn" href="#contact">Voir un exemple</a>
+        </article>
+
+        <article class="card">
+          <h3>Accompagnement juridique</h3>
+          <p>Assistance contractuelle, rédaction de baux, conseils en droit immobilier et accompagnement en cas de contentieux.</p>
+          <a class="btn" href="#contact">Contact juridique</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="why container">
+      <h2>Pourquoi choisir Pilotimmo ?</h2>
+      <ul class="bullet-list">
+        <li>Approche personnalisée pour chaque patrimoine</li>
+        <li>Transparence des frais et reporting régulier</li>
+        <li>Réseau de partenaires (notaires, artisans, courtiers)</li>
+      </ul>
+    </section>
+
+    <section class="faq container">
+      <h2>FAQ rapide</h2>
+      <details>
+        <summary>Quels sont vos frais de gestion ?</summary>
+        <p>Nos frais dépendent du service choisi et du volume de gestion. Nous proposons des forfaits transparents : contactez-nous pour un devis personnalisé.</p>
+      </details>
+      <details>
+        <summary>Est-ce que vous gérez les LMNP ?</summary>
+        <p>Oui, nous accompagnons les statuts LMNP et LMP, ainsi que les particulier·ères et investisseurs institutionnels.</p>
+      </details>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>Prêt à piloter votre patrimoine ? Envoyez-nous un message ou demandez un audit gratuit.</p>
+      <a class="btn-primary" href="mailto:contact@pilotimmo.example">contact@pilotimmo.example</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year"></span> Pilotimmo — Tous droits réservés</div>
+      <nav class="footer-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
+        <a href="#">Mentions légales</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // année automatique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // basique toggle nav (mobile)
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.querySelector('.main-nav').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
