@@ -4,14 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services — Pilotimmo</title>
-  <meta name="description" content="Pilotimmo — Gestion de patrimoine locatif : gestion locative, optimisation fiscale, conseils à l'acquisition et accompagnement travaux." />
+  <meta name="description" content="Pilotimmo — Experts en biens complexes : audit, travaux, successions, recouvrement et remise en location." />
+
+  <!-- IMPORTANT : remplacez le href ci-dessous par le même lien CSS utilisé dans votre index.html
+       (copiez-collez la même balise <link> que sur la page d'accueil pour être sûr de réutiliser EXACTEMENT le même fichier CSS). -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">Pilotimmo</a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="services.html" class="active">Services</a>
         <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
@@ -22,83 +25,113 @@
   </header>
 
   <main>
-    <section class="hero small-hero">
-      <div class="container">
-        <h1>Nos services</h1>
-        <p class="lead">Accompagnement complet pour votre patrimoine locatif : de l'acquisition à la gestion quotidienne, Pilotimmo vous pilote vers la performance.</p>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Nos Services</h1>
+        <h2 class="lead">Experts en Biens Complexes</h2>
+        <p>Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
+
+        <div class="hero-cta" style="margin-top:1rem;">
+          <a class="btn-primary" href="#contact">Diagnostic Gratuit</a>
+          <a class="btn" href="#contact" style="margin-left:0.6rem;">Nous Contacter</a>
+        </div>
+
+        <ul class="stats" style="display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap;list-style:none;padding:0;">
+          <li><strong>200+</strong><div>Biens Gérés</div></li>
+          <li><strong>95%</strong><div>Taux de Satisfaction</div></li>
+          <li><strong>15 ans</strong><div>D'Expérience</div></li>
+        </ul>
       </div>
     </section>
 
-    <section class="services container">
-      <h2>Ce que nous faisons</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Gestion locative</h3>
-          <p>Prise en charge complète des relations avec les locataires, encaissement des loyers, états des lieux, relances et mise en place d'assurances locatives.</p>
-          <a class="btn" href="#contact">Demander une démo</a>
-        </article>
+    <section class="container" aria-labelledby="solutions-title" style="margin-top:2rem;">
+      <h2 id="solutions-title">Des Solutions Pour Chaque Défi</h2>
+      <p>Quatre domaines d'expertise pour gérer les situations les plus complexes</p>
 
-        <article class="card">
-          <h3>Optimisation fiscale & comptable</h3>
-          <p>Conseils pour optimiser la fiscalité de vos biens (régime réel, micro-foncier, LMNP/LMP) et gestion comptable dédiée.</p>
+      <div class="grid grid-3" style="margin-top:1rem;">
+        <article class="card" aria-labelledby="card-energetique">
+          <h3 id="card-energetique">Passoires Énergétiques</h3>
+          <p>Transformez vos biens énergivores en logements performants et conformes aux nouvelles normes DPE.</p>
+          <ul>
+            <li>Audit énergétique complet</li>
+            <li>Plan de rénovation sur mesure</li>
+            <li>Accompagnement aux aides financières</li>
+            <li>Gestion des travaux de A à Z</li>
+          </ul>
           <a class="btn" href="#contact">En savoir plus</a>
         </article>
 
-        <article class="card">
-          <h3>Conseil à l'acquisition</h3>
-          <p>Analyse de projet, sélection de biens, simulations de rentabilité et accompagnement lors des négociations.</p>
-          <a class="btn" href="#contact">Je veux un audit</a>
+        <article class="card" aria-labelledby="card-vacant">
+          <h3 id="card-vacant">Biens Vacants</h3>
+          <p>Remettez en location vos biens inoccupés et maximisez votre rentabilité locative rapidement.</p>
+          <ul>
+            <li>Diagnostic et remise en état</li>
+            <li>Recherche de locataires qualifiés</li>
+            <li>Optimisation du loyer</li>
+            <li>Gestion locative complète</li>
+          </ul>
+          <a class="btn" href="#contact">En savoir plus</a>
         </article>
 
-        <article class="card">
-          <h3>Mise en valeur & travaux</h3>
-          <p>Coordination des travaux, optimisation des aménagements pour augmenter la valeur locative et choisir les matériaux efficaces.</p>
-          <a class="btn" href="#contact">Obtenir un chiffrage</a>
+        <article class="card" aria-labelledby="card-successions">
+          <h3 id="card-successions">Successions & Héritages</h3>
+          <p>Accompagnement complet dans la gestion patrimoniale de biens issus de successions complexes.</p>
+          <ul>
+            <li>Évaluation patrimoniale</li>
+            <li>Conseil en optimisation fiscale</li>
+            <li>Gestion des indivisions</li>
+            <li>Stratégie de valorisation</li>
+          </ul>
+          <a class="btn" href="#contact">En savoir plus</a>
         </article>
 
-        <article class="card">
-          <h3>Reporting & pilotage</h3>
-          <p>Tableaux de bord personnalisés : suivi des loyers, vacance, charges, performance patrimoniale et alertes automatisées.</p>
-          <a class="btn" href="#contact">Voir un exemple</a>
-        </article>
-
-        <article class="card">
-          <h3>Accompagnement juridique</h3>
-          <p>Assistance contractuelle, rédaction de baux, conseils en droit immobilier et accompagnement en cas de contentieux.</p>
-          <a class="btn" href="#contact">Contact juridique</a>
+        <article class="card" aria-labelledby="card-impayes">
+          <h3 id="card-impayes">Charges Impayées</h3>
+          <p>Solutions efficaces pour le recouvrement et la prévention des impayés de loyers et charges.</p>
+          <ul>
+            <li>Recouvrement amiable</li>
+            <li>Procédures juridiques</li>
+            <li>Prévention des impayés</li>
+            <li>Assurance loyers impayés</li>
+          </ul>
+          <a class="btn" href="#contact">En savoir plus</a>
         </article>
       </div>
     </section>
 
-    <section class="why container">
-      <h2>Pourquoi choisir Pilotimmo ?</h2>
-      <ul class="bullet-list">
-        <li>Approche personnalisée pour chaque patrimoine</li>
-        <li>Transparence des frais et reporting régulier</li>
-        <li>Réseau de partenaires (notaires, artisans, courtiers)</li>
-      </ul>
+    <section class="container" aria-labelledby="methode-title" style="margin-top:2rem;">
+      <h2 id="methode-title">Notre Méthode</h2>
+      <p>Un Accompagnement Complet — De l'analyse initiale à l'optimisation continue de votre patrimoine</p>
+
+      <ol class="steps" style="margin-top:1rem;padding-left:1.2rem;">
+        <li>
+          <strong>1 — Diagnostic Initial</strong>
+          <div>Analyse complète de votre situation patrimoniale</div>
+        </li>
+        <li style="margin-top:0.6rem;">
+          <strong>2 — Stratégie Sur Mesure</strong>
+          <div>Plan d'action personnalisé selon vos objectifs</div>
+        </li>
+        <li style="margin-top:0.6rem;">
+          <strong>3 — Mise en Œuvre</strong>
+          <div>Gestion opérationnelle de A à Z</div>
+        </li>
+        <li style="margin-top:0.6rem;">
+          <strong>4 — Suivi & Optimisation</strong>
+          <div>Accompagnement continu et reporting régulier</div>
+        </li>
+      </ol>
     </section>
 
-    <section class="faq container">
-      <h2>FAQ rapide</h2>
-      <details>
-        <summary>Quels sont vos frais de gestion ?</summary>
-        <p>Nos frais dépendent du service choisi et du volume de gestion. Nous proposons des forfaits transparents : contactez-nous pour un devis personnalisé.</p>
-      </details>
-      <details>
-        <summary>Est-ce que vous gérez les LMNP ?</summary>
-        <p>Oui, nous accompagnons les statuts LMNP et LMP, ainsi que les particulier·ères et investisseurs institutionnels.</p>
-      </details>
-    </section>
-
-    <section id="contact" class="contact container">
-      <h2>Contact</h2>
-      <p>Prêt à piloter votre patrimoine ? Envoyez-nous un message ou demandez un audit gratuit.</p>
-      <a class="btn-primary" href="mailto:contact@pilotimmo.example">contact@pilotimmo.example</a>
+    <section id="contact" class="contact container" style="margin-top:2rem;">
+      <h2>Prêt à valoriser votre patrimoine ?</h2>
+      <p>Contactez-nous pour un diagnostic gratuit et personnalisé de votre situation.</p>
+      <a class="btn-primary" href="mailto:contact@pilotimmo.example">Contactez-nous</a>
+      <a class="btn" href="#methode-title" style="margin-left:0.6rem;">En savoir plus</a>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" style="margin-top:2rem;">
     <div class="container">
       <div>© <span id="year"></span> Pilotimmo — Tous droits réservés</div>
       <nav class="footer-nav">
@@ -114,10 +147,13 @@
     // année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // basique toggle nav (mobile)
-    document.querySelector('.nav-toggle').addEventListener('click', function () {
-      document.querySelector('.main-nav').classList.toggle('open');
-    });
+    // basique toggle nav (mobile) - en supposant que le CSS de la home gère .main-nav.open
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        document.querySelector('.main-nav').classList.toggle('open');
+      });
+    }
   </script>
 </body>
 </html>
