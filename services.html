@@ -5,153 +5,218 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Services — Pilotimmo</title>
   <meta name="description" content="Pilotimmo — Experts en biens complexes : audit, travaux, successions, recouvrement et remise en location." />
-
-  <!-- IMPORTANT : utilisez la même balise <link> que sur votre index.html pour réutiliser EXACTEMENT le même CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
+  <header class="header" role="banner">
+    <div class="nav-container">
       <a class="logo" href="index.html">Pilotimmo</a>
-      <nav class="main-nav" aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="services.html" class="active">Services</a>
-        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-        <a href="#contact" class="btn-outline">Contact</a>
+
+      <nav role="navigation" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
-      <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
+
+      <button class="mobile-menu-btn" aria-controls="main-nav" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
     </div>
   </header>
 
   <main>
-    <section class="hero small-hero" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title">Nos Services</h1>
-        <h2 class="lead">Experts en Biens Complexes</h2>
-        <p>Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 id="hero-title">Nos Services</h1>
+          <h2 class="highlight">Experts en Biens Complexes</h2>
+          <p class="hero-description">Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
 
-        <div class="hero-cta" style="margin-top:1rem;">
-          <a class="btn-primary" href="#contact">Diagnostic Gratuit</a>
-          <a class="btn" href="#contact" style="margin-left:0.6rem;">Nous Contacter</a>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a class="btn btn-primary btn-lg" href="#contact">Diagnostic Gratuit</a>
+            <a class="btn" href="#contact" style="background:none;border:2px solid rgba(255,255,255,0.12);color:var(--white)">Nous Contacter</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Biens Gérés</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">95%</div>
+              <div class="stat-label">Taux de Satisfaction</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">15 ans</div>
+              <div class="stat-label">D'Expérience</div>
+            </div>
+          </div>
         </div>
 
-        <ul class="stats" style="display:flex;gap:1.5rem;margin-top:1.5rem;flex-wrap:wrap;list-style:none;padding:0;">
-          <li><strong>200+</strong><div>Biens Gérés</div></li>
-          <li><strong>95%</strong><div>Taux de Satisfaction</div></li>
-          <li><strong>15 ans</strong><div>D'Expérience</div></li>
-        </ul>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Placeholder visual: adapt or replace by an illustration/image -->
+          <div class="floating-cards" style="height:320px;">
+            <div class="floating-card" style="--delay:0s; width:180px;">
+              <strong>Audit</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Diagnostic et recommandations</div>
+            </div>
+            <div class="floating-card" style="--delay:0.6s; width:200px;">
+              <strong>Travaux</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Coordination complète</div>
+            </div>
+            <div class="floating-card" style="--delay:1.2s; width:160px;">
+              <strong>Suivi</strong><div style="font-size:0.9rem;margin-top:0.5rem;">Reporting régulier</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="container" aria-labelledby="solutions-title" style="margin-top:2rem;">
-      <h2 id="solutions-title">Des Solutions Pour Chaque Défi</h2>
-      <p>Quatre domaines d'expertise pour gérer les situations les plus complexes</p>
+    <!-- SOLUTIONS -->
+    <section class="section section-light" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="solutions-title">Des Solutions Pour Chaque Défi</h2>
+        </div>
+        <p class="section-subtitle">Quatre domaines d'expertise pour gérer les situations les plus complexes</p>
 
-      <div class="grid grid-3" style="margin-top:1rem;">
-        <article class="card" aria-labelledby="card-energetique">
-          <h3 id="card-energetique">Passoires Énergétiques</h3>
-          <p>Transformez vos biens énergivores en logements performants et conformes aux nouvelles normes DPE.</p>
-          <ul>
-            <li>Audit énergétique complet</li>
-            <li>Plan de rénovation sur mesure</li>
-            <li>Accompagnement aux aides financières</li>
-            <li>Gestion des travaux de A à Z</li>
-          </ul>
-          <a class="btn" href="#contact">En savoir plus</a>
-        </article>
+        <div class="grid grid-4">
+          <article class="service-card card card-hover">
+            <div class="service-icon">⚡</div>
+            <h3 class="service-title">Passoires Énergétiques</h3>
+            <p>Transformez vos biens énergivores en logements performants et conformes aux nouvelles normes DPE.</p>
+            <ul class="service-list" aria-label="Services Passoires Énergétiques">
+              <li>Audit énergétique complet</li>
+              <li>Plan de rénovation sur mesure</li>
+              <li>Accompagnement aux aides financières</li>
+              <li>Gestion des travaux de A à Z</li>
+            </ul>
+            <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
+          </article>
 
-        <article class="card" aria-labelledby="card-vacant">
-          <h3 id="card-vacant">Biens Vacants</h3>
-          <p>Remettez en location vos biens inoccupés et maximisez votre rentabilité locative rapidement.</p>
-          <ul>
-            <li>Diagnostic et remise en état</li>
-            <li>Recherche de locataires qualifiés</li>
-            <li>Optimisation du loyer</li>
-            <li>Gestion locative complète</li>
-          </ul>
-          <a class="btn" href="#contact">En savoir plus</a>
-        </article>
+          <article class="service-card card card-hover">
+            <div class="service-icon">🏚️</div>
+            <h3 class="service-title">Biens Vacants</h3>
+            <p>Remettez en location vos biens inoccupés et maximisez votre rentabilité locative rapidement.</p>
+            <ul class="service-list" aria-label="Services Biens Vacants">
+              <li>Diagnostic et remise en état</li>
+              <li>Recherche de locataires qualifiés</li>
+              <li>Optimisation du loyer</li>
+              <li>Gestion locative complète</li>
+            </ul>
+            <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
+          </article>
 
-        <article class="card" aria-labelledby="card-successions">
-          <h3 id="card-successions">Successions &amp; Héritages</h3>
-          <p>Accompagnement complet dans la gestion patrimoniale de biens issus de successions complexes.</p>
-          <ul>
-            <li>Évaluation patrimoniale</li>
-            <li>Conseil en optimisation fiscale</li>
-            <li>Gestion des indivisions</li>
-            <li>Stratégie de valorisation</li>
-          </ul>
-          <a class="btn" href="#contact">En savoir plus</a>
-        </article>
+          <article class="service-card card card-hover">
+            <div class="service-icon">⚖️</div>
+            <h3 class="service-title">Successions & Héritages</h3>
+            <p>Accompagnement complet dans la gestion patrimoniale de biens issus de successions complexes.</p>
+            <ul class="service-list" aria-label="Services Successions & Héritages">
+              <li>Évaluation patrimoniale</li>
+              <li>Conseil en optimisation fiscale</li>
+              <li>Gestion des indivisions</li>
+              <li>Stratégie de valorisation</li>
+            </ul>
+            <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
+          </article>
 
-        <article class="card" aria-labelledby="card-impayes">
-          <h3 id="card-impayes">Charges Impayées</h3>
-          <p>Solutions efficaces pour le recouvrement et la prévention des impayés de loyers et charges.</p>
-          <ul>
-            <li>Recouvrement amiable</li>
-            <li>Procédures juridiques</li>
-            <li>Prévention des impayés</li>
-            <li>Assurance loyers impayés</li>
-          </ul>
-          <a class="btn" href="#contact">En savoir plus</a>
-        </article>
+          <article class="service-card card card-hover">
+            <div class="service-icon">📥</div>
+            <h3 class="service-title">Charges Impayées</h3>
+            <p>Solutions efficaces pour le recouvrement et la prévention des impayés de loyers et charges.</p>
+            <ul class="service-list" aria-label="Services Charges Impayées">
+              <li>Recouvrement amiable</li>
+              <li>Procédures juridiques</li>
+              <li>Prévention des impayés</li>
+              <li>Assurance loyers impayés</li>
+            </ul>
+            <a class="btn" href="#contact" style="margin-top:0.75rem;display:inline-block;">En savoir plus</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="container" aria-labelledby="methode-title" style="margin-top:2rem;">
-      <h2 id="methode-title">Notre Méthode</h2>
-      <p>Un Accompagnement Complet — De l'analyse initiale à l'optimisation continue de votre patrimoine</p>
+    <!-- PROCESS / METHODE -->
+    <section class="section" aria-labelledby="methode-title">
+      <div class="container">
+        <div class="section-title">
+          <h2 id="methode-title">Notre Méthode</h2>
+        </div>
+        <p class="section-subtitle">Un Accompagnement Complet — De l'analyse initiale à l'optimisation continue de votre patrimoine</p>
 
-      <ol class="steps" style="margin-top:1rem;padding-left:1.2rem;">
-        <li>
-          <strong>1 — Diagnostic Initial</strong>
-          <div>Analyse complète de votre situation patrimoniale</div>
-        </li>
-        <li style="margin-top:0.6rem;">
-          <strong>2 — Stratégie Sur Mesure</strong>
-          <div>Plan d'action personnalisé selon vos objectifs</div>
-        </li>
-        <li style="margin-top:0.6rem;">
-          <strong>3 — Mise en Œuvre</strong>
-          <div>Gestion opérationnelle de A à Z</div>
-        </li>
-        <li style="margin-top:0.6rem;">
-          <strong>4 — Suivi &amp; Optimisation</strong>
-          <div>Accompagnement continu et reporting régulier</div>
-        </li>
-      </ol>
+        <div class="process">
+          <div class="process-line" aria-hidden="true"></div>
+          <div class="grid grid-3" style="align-items:start;">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3 class="step-title">Diagnostic Initial</h3>
+              <p class="step-text">Analyse complète de votre situation patrimoniale</p>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3 class="step-title">Stratégie Sur Mesure</h3>
+              <p class="step-text">Plan d'action personnalisé selon vos objectifs</p>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3 class="step-title">Mise en Œuvre & Suivi</h3>
+              <p class="step-text">Gestion opérationnelle de A à Z et reporting continu</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact container" style="margin-top:2rem;">
-      <h2>Prêt à valoriser votre patrimoine ?</h2>
-      <p>Contactez-nous pour un diagnostic gratuit et personnalisé de votre situation.</p>
-      <a class="btn-primary" href="mailto:contact@pilotimmo.example">Contactez-nous</a>
-      <a class="btn" href="#methode-title" style="margin-left:0.6rem;">En savoir plus</a>
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="contact-title">
+      <div class="container text-center">
+        <h2 id="contact-title" class="cta-title">Prêt à valoriser votre patrimoine ?</h2>
+        <p class="cta-text">Contactez-nous pour un diagnostic gratuit et personnalisé de votre situation.</p>
+        <a class="btn btn-primary btn-lg" href="mailto:contact@pilotimmo.example">Contactez-nous</a>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer" style="margin-top:2rem;">
-    <div class="container">
-      <div>© <span id="year"></span> Pilotimmo — Tous droits réservés</div>
-      <nav class="footer-nav">
-        <a href="index.html">Accueil</a>
-        <a href="services.html">Services</a>
-        <a href="qui-sommes-nous.html">Qui sommes-nous ?</a>
-        <a href="#">Mentions légales</a>
-      </nav>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-content">
+      <div>
+        <h4 class="footer-title">Pilotimmo</h4>
+        <p class="footer-text">Gestion de patrimoine locatif spécialisé en biens complexes.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title">Contact</h4>
+        <p class="footer-text">contact@pilotimmo.example</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Pilotimmo — Tous droits réservés
     </div>
   </footer>
 
   <script>
-    // année automatique
+    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // basique toggle nav (mobile)
-    const toggle = document.querySelector('.nav-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', function () {
-        const nav = document.querySelector('.main-nav');
-        if (nav) nav.classList.toggle('open');
+    // Toggle mobile nav (affiche/masque .nav-links en mobile)
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+      mobileBtn.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
     }
   </script>
