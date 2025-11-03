@@ -6,8 +6,7 @@
   <title>Services — Pilotimmo</title>
   <meta name="description" content="Pilotimmo — Experts en biens complexes : audit, travaux, successions, recouvrement et remise en location." />
 
-  <!-- IMPORTANT : remplacez le href ci-dessous par le même lien CSS utilisé dans votre index.html
-       (copiez-collez la même balise <link> que sur la page d'accueil pour être sûr de réutiliser EXACTEMENT le même fichier CSS). -->
+  <!-- IMPORTANT : utilisez la même balise <link> que sur votre index.html pour réutiliser EXACTEMENT le même CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -25,8 +24,8 @@
   </header>
 
   <main>
-    <section class="hero container" aria-labelledby="hero-title">
-      <div>
+    <section class="hero small-hero" aria-labelledby="hero-title">
+      <div class="container">
         <h1 id="hero-title">Nos Services</h1>
         <h2 class="lead">Experts en Biens Complexes</h2>
         <p>Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
@@ -74,7 +73,7 @@
         </article>
 
         <article class="card" aria-labelledby="card-successions">
-          <h3 id="card-successions">Successions & Héritages</h3>
+          <h3 id="card-successions">Successions &amp; Héritages</h3>
           <p>Accompagnement complet dans la gestion patrimoniale de biens issus de successions complexes.</p>
           <ul>
             <li>Évaluation patrimoniale</li>
@@ -117,7 +116,7 @@
           <div>Gestion opérationnelle de A à Z</div>
         </li>
         <li style="margin-top:0.6rem;">
-          <strong>4 — Suivi & Optimisation</strong>
+          <strong>4 — Suivi &amp; Optimisation</strong>
           <div>Accompagnement continu et reporting régulier</div>
         </li>
       </ol>
@@ -147,11 +146,12 @@
     // année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // basique toggle nav (mobile) - en supposant que le CSS de la home gère .main-nav.open
+    // basique toggle nav (mobile)
     const toggle = document.querySelector('.nav-toggle');
     if (toggle) {
       toggle.addEventListener('click', function () {
-        document.querySelector('.main-nav').classList.toggle('open');
+        const nav = document.querySelector('.main-nav');
+        if (nav) nav.classList.toggle('open');
       });
     }
   </script>
