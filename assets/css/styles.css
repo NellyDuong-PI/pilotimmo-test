@@ -801,7 +801,10 @@ p {
 }
 
 .footer-title {
-    margin-bottom: var(--spacing-sm);
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #fff; /* texte blanc */
 }
 
 .footer-text {
