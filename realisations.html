@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Réalisations - Pilotimmo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e5aa8 0%, #2d7dd2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231e5aa8" width="1200" height="600"/><path fill="%232d7dd2" opacity="0.3" d="M0,300 L200,250 L400,320 L600,280 L800,340 L1000,290 L1200,330 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #1e5aa8;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 1.1em;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            font-size: 1.6em;
+            color: #1e5aa8;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .project-details h4 {
+            color: #1e5aa8;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-details ul {
+            list-style: none;
+        }
+
+        .project-details li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .project-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .solutions-section {
+            background: #f8f9fa;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+        }
+
+        .solution-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .solution-card h3 {
+            color: #1e5aa8;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .solution-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e5aa8;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #1e5aa8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #164a8c;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 2em;
+            }
+
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Nos Réalisations</h1>
+            <p>Des projets immobiliers complexes transformés en succès</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Découvrez nos succès</h2>
+            </div>
+            <p class="section-subtitle">
+                Chaque projet est unique. Nous apportons des solutions sur-mesure pour valoriser votre patrimoine immobilier.
+            </p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop" alt="Rénovation appartement">
+                        <span class="project-badge">Rénovation Complète</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Passoire énergétique : de G à D</h3>
+                        <p class="project-description">
+                            Transformation complète d'un bien immobilier classé G en classe D, avec amélioration significative de la performance énergétique et valorisation locative.
+                        </p>
+                        <div class="project-details">
+                            <h4>Notre accompagnement</h4>
+                            <ul>
+                                <li>Audit énergétique complet</li>
+                                <li>Établissement du budget des travaux</li>
+                                <li>Coordination et mise en œuvre</li>
+                                <li>Valorisation et mise en location optimisée</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=500&fit=crop" alt="Studio rénové">
+                        <span class="project-badge">Rénovation Complète</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Studio sinistré : renaissance complète</h3>
+                        <p class="project-description">
+                            Suite à des dégâts des eaux importants, accompagnement complet de la rénovation jusqu'à la valorisation du bien en location puis en vente.
+                        </p>
+                        <div class="project-details">
+                            <h4>Notre accompagnement</h4>
+                            <ul>
+                                <li>Audit des dommages et solutions</li>
+                                <li>Gestion du conflit avec les assurances</li>
+                                <li>Mise en œuvre de la rénovation complète</li>
+                                <li>Valorisation du sortie - location puis vente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=500&fit=crop" alt="Maison succession">
+                        <span class="project-badge">Succession</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Succession : valorisation d'une résidence secondaire</h3>
+                        <p class="project-description">
+                            Transformation d'une résidence secondaire vide et non louée en bien locatif rentable, avec financement et suivi complet des travaux.
+                        </p>
+                        <div class="project-details">
+                            <h4>Notre accompagnement</h4>
+                            <ul>
+                                <li>Audit du bien et opportunités</li>
+                                <li>Budget détaillé des travaux nécessaires</li>
+                                <li>Recherche et montage du financement</li>
+                                <li>Suivi des travaux et mise en location</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop" alt="Logement occupé">
+                        <span class="project-badge">Gestion juridique</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Logement occupé : résolution juridique</h3>
+                        <p class="project-description">
+                            Prise en charge complète d'une situation complexe de logement occupé, en collaboration avec avocats et huissiers jusqu'à résolution satisfaisante.
+                        </p>
+                        <div class="project-details">
+                            <h4>Notre accompagnement</h4>
+                            <ul>
+                                <li>Analyse de la situation juridique</li>
+                                <li>Coordination avec avocats et huissiers</li>
+                                <li>Suivi des démarches légales</li>
+                                <li>Résolution négociée et satisfaisante</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section solutions-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vos problèmes, nos solutions</h2>
+            </div>
+            <p class="section-subtitle">
+                Ne laissez pas votre patrimoine se détériorer. Nous transformons les défis immobiliers en opportunités de valorisation.
+            </p>
+
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🏗️</div>
+                    <h3>Rénovation</h3>
+                    <p>De l'audit à la livraison, nous gérons vos projets de A à Z</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">⚡</div>
+                    <h3>Performance énergétique</h3>
+                    <p>Valorisez votre bien en améliorant son classement énergétique</p>
+                </div>
+
+                <div class="solution-card">
+                    <div class="solution-icon">⚖️</div>
+                    <h3>Gestion juridique</h3>
+                    <p>Résolvez les situations complexes avec notre réseau d'experts</p>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>Ils nous font confiance</h2>
+            </div>
+            <p class="section-subtitle">
+                Découvrez les témoignages de nos clients satisfaits
+            </p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Pilotimmo a transformé mon appartement classé G en bien performant. Leur accompagnement de A à Z m'a permis d'augmenter significativement ma valeur locative. Je recommande vivement leurs services !"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Marie D.</strong>
+                        <span>Propriétaire à Lyon</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Après des dégâts des eaux catastrophiques, je ne savais plus où donner de la tête. L'équipe a géré l'intégralité du dossier avec l'assurance et coordonné tous les travaux. Un vrai soulagement !"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Jean-Pierre M.</strong>
+                        <span>Investisseur immobilier</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Suite à une succession, nous avions une maison inoccupée depuis des années. Pilotimmo nous a aidés à la valoriser et à trouver un financement pour les travaux. Aujourd'hui, elle génère des revenus réguliers."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Sophie et Marc L.</strong>
+                        <span>Héritiers</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Situation locative très compliquée que je n'arrivais pas à résoudre seul. Grâce à leur réseau d'avocats et leur expertise, le problème a été réglé en quelques mois. Professionnalisme exemplaire."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Thomas R.</strong>
+                        <span>Propriétaire bailleur</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "J'ai fait appel à Pilotimmo pour rénover un studio avant de le vendre. Non seulement les travaux ont été réalisés dans les temps, mais j'ai vendu 25% plus cher que prévu. Excellente rentabilité !"
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Nathalie B.</strong>
+                        <span>Propriétaire à Villeurbanne</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "En tant qu'investisseur, je n'ai pas le temps de gérer les rénovations. Pilotimmo s'occupe de tout : audits, devis, coordination, réception des travaux. Je peux me concentrer sur mes projets."
+                    </p>
+                    <div class="testimonial-author">
+                        <strong>Alexandre P.</strong>
+                        <span>Investisseur multi-biens</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Parlons de votre projet</h2>
+            </div>
+            <p class="section-subtitle">
+                Remplissez ce formulaire et nous vous recontacterons rapidement pour discuter de vos besoins.
+            </p>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message *</label>
+                    <textarea id="message" name="message" placeholder="Décrivez-nous votre projet et vos besoins..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Envoyer ma demande</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
