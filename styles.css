@@ -987,7 +987,7 @@ p {
 
 .services-hero {
     position: relative;
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 50%, #334155 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 50%, var(--secondary) 100%);
     color: var(--white);
     text-align: center;
     padding: 180px 1.5rem 140px;
@@ -1058,7 +1058,8 @@ p {
 
 .trust-indicator {
     flex: 1 1 250px;
-    background: var(--light);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(245, 158, 11, 0.1));
+    border: 1px solid rgba(59, 130, 246, 0.15);
     padding: 2rem;
     border-radius: var(--radius-lg);
     text-align: center;
@@ -1067,6 +1068,7 @@ p {
 }
 
 .trust-indicator:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(245, 158, 11, 0.15));
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
 }
@@ -1083,5 +1085,3 @@ p {
     color: var(--text);
     opacity: 0.8;
 }
-
-
