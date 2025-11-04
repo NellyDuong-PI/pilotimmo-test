@@ -52,8 +52,22 @@ function animateCounter(element, target, duration = 2000) {
     }, 16);
 }
 
-function initCounters() {
+ffunction initCounters() {
     const counters = document.querySelectorAll('.stat-number');
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                animateCounter(entry.target, target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initCounters();
+});
