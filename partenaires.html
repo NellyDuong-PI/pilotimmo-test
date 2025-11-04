@@ -1,341 +1,246 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez notre réseau de partenaires de confiance : artisans, diagnostiqueurs, experts comptables, notaires. Un écosystème au service de votre patrimoine.">
-    <meta name="keywords" content="partenaires immobilier, artisans rénovation, diagnostiqueur, expert comptable, notaire">
-    <title>Nos Partenaires - Pilotimmo | Réseau d'Experts de Confiance</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Programme Partenaires - Pilotimmo</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Global -->
+    <link rel="stylesheet" href="assets/css/partenaires.css"> <!-- Spécifique -->
 </head>
+
+<!-- Bandeau cookies global -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-banner-inner">
+    <span>Ce site utilise des cookies pour améliorer votre expérience.</span>
+    <button id="accept-cookies">Accepter</button>
+    <button id="decline-cookies">Refuser</button>
+  </div>
+</div>
+
+<!-- Script cookies -->
+<script src="assets/js/cookies.js"></script>
+
+    
 <body>
-    <header>
-        <nav>
-            <div class="logo">PILOTIMMO</div>
+   <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Logo Pilotimmo" class="logo-img">
+                    <div class="logo">PILOTIMMO</div>
+                </a>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="partenaires.html" class="active">Partenaires</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="recrutement.html">Recrutement</a></li>
-                <li><a href="contact.html" class="cta-nav">Contact</a></li>
+                <li><a href="realisation.html">Realisations</a></li>
+                <li><a href="contact.html" class="cta-nav">Diagnostic Offert</a></li>
             </ul>
-            <button class="mobile-menu-btn">☰</button>
+            <button class="mobile-menu-btn" aria-label="Menu mobile">☰</button>
         </nav>
     </header>
 
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Nos Partenaires</h1>
-            <p>Un réseau d'experts qualifiés pour vous accompagner à chaque étape</p>
-        </div>
-    </section>
-
-    <section class="partners-intro">
-        <div class="intro-content">
-            <h2>Un Écosystème au Service de Votre Patrimoine</h2>
-            <p>Chez Pilotimmo, nous avons tissé des partenariats solides avec les meilleurs professionnels de l'immobilier, du bâtiment et du conseil. Ce réseau nous permet de vous offrir un service complet, coordonné et de haute qualité.</p>
-            
-            <div class="intro-stats">
-                <div class="intro-stat">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Partenaires actifs</span>
-                </div>
-                <div class="intro-stat">
-                    <span class="stat-number">10 ans</span>
-                    <span class="stat-label">D'expérience moyenne</span>
-                </div>
-                <div class="intro-stat">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Certifiés et assurés</span>
-                </div>
+    <!-- Hero -->
+    <section class="partners-hero">
+        <div class="partners-hero-overlay"></div>
+        <div class="partners-hero-content">
+            <span class="hero-badge">PROGRAMME PARTENAIRES</span>
+            <h1>Offrez à vos clients une <span class="gradient-text">gestion patrimoniale</span> d'excellence</h1>
+            <p>Rejoignez notre réseau de partenaires prescripteurs et apportez une solution complète à vos clients propriétaires de biens locatifs complexes.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Devenir partenaire</a>
+                <a href="#" class="btn btn-secondary">Découvrir les avantages</a>
             </div>
         </div>
     </section>
 
-    <section class="partners-categories">
-        <h2>Nos Catégories de Partenaires</h2>
+    <!-- Pourquoi devenir partenaire -->
+    <section class="section">
+        <div class="container text-center">
+            <h2>Pourquoi devenir partenaire ?</h2>
+            <p>Un partenariat gagnant-gagnant pour développer votre activité et satisfaire vos clients.</p>
 
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🔨</span>
-                <h3>Artisans & Corps de Métiers</h3>
-            </div>
-            <p class="category-desc">Des professionnels qualifiés RGE pour tous vos travaux de rénovation et d'amélioration énergétique.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/artisan1.png" alt="Logo partenaire" loading="lazy">
-                    </div>
-                    <h4>Plombiers Chauffagistes</h4>
-                    <p>Installation pompes à chaleur, isolation thermique, chaudières nouvelle génération</p>
-                    <span class="partner-badge">RGE Certifié</span>
+            <div class="grid grid-4 partner-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Revenus complémentaires</h3>
+                    <p>Bénéficiez d’une commission attractive pour chaque client apporté et accompagné dans la durée.</p>
                 </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/artisan2.png" alt="Logo partenaire" loading="lazy">
-                    </div>
-                    <h4>Électriciens</h4>
-                    <p>Mise aux normes, rénovation électrique, domotique, bornes de recharge</p>
-                    <span class="partner-badge">RGE Certifié</span>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Valeur ajoutée client</h3>
+                    <p>Proposez une solution clé en main à vos clients propriétaires de patrimoine immobilier locatif complexe.</p>
                 </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/artisan3.png" alt="Logo partenaire" loading="lazy">
-                    </div>
-                    <h4>Menuisiers</h4>
-                    <p>Remplacement fenêtres double/triple vitrage, isolation phonique, volets</p>
-                    <span class="partner-badge">RGE Certifié</span>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Expertise reconnue</h3>
+                    <p>Associez-vous à une marque de référence dans la gestion de patrimoine immobilier locatif.</p>
                 </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/artisan4.png" alt="Logo partenaire" loading="lazy">
-                    </div>
-                    <h4>Peintres & Décorateurs</h4>
-                    <p>Rénovation intérieure, home staging, valorisation esthétique</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🔍</span>
-                <h3>Diagnostics & Expertise</h3>
-            </div>
-            <p class="category-desc">Diagnostiqueurs certifiés pour tous vos diagnostics obligatoires et conseils techniques.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/diag1.png" alt="Logo diagnostiqueur" loading="lazy">
-                    </div>
-                    <h4>Diagnostics Immobiliers</h4>
-                    <p>DPE, amiante, plomb, électricité, gaz, termites, Carrez</p>
-                    <span class="partner-badge">Certifié</span>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/diag2.png" alt="Logo expert" loading="lazy">
-                    </div>
-                    <h4>Bureaux d'Études Thermiques</h4>
-                    <p>Audit énergétique, études thermiques, simulation travaux</p>
-                    <span class="partner-badge">Certifié</span>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/expert1.png" alt="Logo expert bâtiment" loading="lazy">
-                    </div>
-                    <h4>Experts Bâtiment</h4>
-                    <p>Expertise technique, malfaçons, sinistres, contentieux</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">💼</span>
-                <h3>Conseil & Juridique</h3>
-            </div>
-            <p class="category-desc">Professionnels du conseil pour optimiser la gestion fiscale et juridique de votre patrimoine.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/comptable1.png" alt="Logo expert-comptable" loading="lazy">
-                    </div>
-                    <h4>Experts-Comptables</h4>
-                    <p>Optimisation fiscale, déficit foncier, SCI, déclarations</p>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/notaire1.png" alt="Logo notaire" loading="lazy">
-                    </div>
-                    <h4>Notaires</h4>
-                    <p>Transactions, successions, donations, constitutions SCI</p>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/avocat1.png" alt="Logo avocat" loading="lazy">
-                    </div>
-                    <h4>Avocats Immobiliers</h4>
-                    <p>Contentieux locatifs, copropriété, urbanisme</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏦</span>
-                <h3>Financement</h3>
-            </div>
-            <p class="category-desc">Courtiers et banques partenaires pour financer vos projets d'acquisition et de travaux.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/courtier1.png" alt="Logo courtier" loading="lazy">
-                    </div>
-                    <h4>Courtiers en Prêts</h4>
-                    <p>Financement acquisition, travaux, renégociation, regroupement</p>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/banque1.png" alt="Logo banque" loading="lazy">
-                    </div>
-                    <h4>Banques Partenaires</h4>
-                    <p>Conditions préférentielles pour nos clients, process accéléré</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏢</span>
-                <h3>Assurances & Services</h3>
-            </div>
-            <p class="category-desc">Protection de votre patrimoine et services complémentaires.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/assurance1.png" alt="Logo assureur" loading="lazy">
-                    </div>
-                    <h4>Assurances PNO & GLI</h4>
-                    <p>Propriétaire Non Occupant, Garantie Loyers Impayés, RC</p>
-                </div>
-
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="images/partenaires/syndic1.png" alt="Logo syndic" loading="lazy">
-                    </div>
-                    <h4>Syndics de Copropriété</h4>
-                    <p>Gestion de copropriété, optimisation charges, travaux collectifs</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Accompagnement dédié</h3>
+                    <p>Profitez d’un support commercial et technique pour faciliter vos recommandations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="partner-benefits">
-        <h2>Les Avantages de Notre Réseau</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <span class="benefit-icon">✓</span>
-                <h3>Sélection Rigoureuse</h3>
-                <p>Chaque partenaire est sélectionné selon des critères stricts : qualifications, références, expérience et tarifs.</p>
-            </div>
+    <!-- Vous êtes un professionnel -->
+    <section class="section section-light">
+        <div class="container text-center">
+            <h2>Vous êtes un professionnel</h2>
+            <p>Notre programme partenaire s’adresse à tous les prescripteurs en contact avec des propriétaires de biens locatifs.</p>
 
-            <div class="benefit-card">
-                <span class="benefit-icon">⚡</span>
-                <h3>Réactivité Garantie</h3>
-                <p>Intervention rapide grâce à notre réseau prioritaire. Délais réduits pour diagnostics et devis.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-icon">💰</span>
-                <h3>Tarifs Négociés</h3>
-                <p>Grâce à notre volume d'affaires, nous obtenons des tarifs préférentiels que nous répercutons.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-icon">🔒</span>
-                <h3>Qualité Contrôlée</h3>
-                <p>Nous suivons et évaluons régulièrement nos partenaires pour garantir une prestation optimale.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-icon">📋</span>
-                <h3>Coordination Totale</h3>
-                <p>Nous gérons l'ensemble des intervenants : planification, suivi chantier, réception travaux.</p>
-            </div>
-
-            <div class="benefit-card">
-                <span class="benefit-icon">🛡️</span>
-                <h3>Assurances & Garanties</h3>
-                <p>Tous nos partenaires sont assurés (RC Pro, décennale) et offrent les garanties légales.</p>
+            <div class="grid grid-4 professional-types">
+                <div class="pro-card">
+                    <div class="pro-icon">⚖️</div>
+                    <h3>Notaires</h3>
+                    <p>Accompagnez vos clients lors de successions ou d’acquisitions de biens locatifs complexes.</p>
+                </div>
+                <div class="pro-card">
+                    <div class="pro-icon">💼</div>
+                    <h3>Avocats</h3>
+                    <p>Proposez une solution de gestion patrimoniale à vos clients en litige ou restructuration.</p>
+                </div>
+                <div class="pro-card">
+                    <div class="pro-icon">📋</div>
+                    <h3>Diagnostiqueurs</h3>
+                    <p>Complétez votre offre en orientant vos clients vers une gestion optimisée de leurs biens.</p>
+                </div>
+                <div class="pro-card">
+                    <div class="pro-icon">🏢</div>
+                    <h3>Agences immobilières</h3>
+                    <p>Offrez un service premium à vos clients propriétaires de patrimoine locatif important.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="become-partner">
-        <div class="become-partner-content">
-            <h2>Vous Êtes un Professionnel ?</h2>
-            <p>Rejoignez notre réseau de partenaires de confiance et développez votre activité avec Pilotimmo.</p>
-            
-            <div class="partner-criteria">
-                <h3>Nous recherchons :</h3>
-                <ul>
-                    <li>Artisans qualifiés (RGE si applicable)</li>
-                    <li>Diagnostiqueurs certifiés</li>
-                    <li>Professionnels du conseil (comptables, avocats, notaires)</li>
-                    <li>Courtiers et organismes de financement</li>
-                    <li>Assureurs spécialisés immobilier</li>
-                </ul>
+    <!-- KPI sur fond noir -->
+    <section class="kpi-section">
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <h2>500+</h2>
+                <p>Biens gérés</p>
             </div>
-            
-            <a href="contact.html" class="cta-primary">Devenir Partenaire</a>
+            <div class="kpi-card">
+                <h2>95%</h2>
+                <p>Satisfaction client</p>
+            </div>
+            <div class="kpi-card">
+                <h2>15+</h2>
+                <p>Ans d'expertise</p>
+            </div>
+            <div class="kpi-card">
+                <h2>50+</h2>
+                <p>Partenaires actifs</p>
+            </div>
         </div>
     </section>
 
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Un Projet de Valorisation ?</h2>
-            <p>Notre réseau de partenaires est prêt à intervenir pour redonner de la valeur à vos biens.</p>
-            <a href="contact.html" class="cta-primary">Demander un Diagnostic Gratuit</a>
+    <!-- Comment devenir partenaire -->
+    <section class="process-section">
+        <div class="container text-center">
+            <h2>Comment devenir partenaire ?</h2>
+            <p>Un processus simple et rapide en 3 étapes</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Premier contact</h3>
+                    <p>Remplissez le formulaire de candidature ou contactez-nous directement pour échanger sur notre programme.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Validation du partenariat</h3>
+                    <p>Nous étudions votre profil et validons ensemble les modalités de notre collaboration.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Lancement</h3>
+                    <p>Accédez à vos outils partenaires et commencez à recommander Pilotimmo à vos clients.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Rejoignez-nous avec formulaire Hubspot -->
+    <section class="contact-section">
+        <div class="container text-center">
+            <h2>Rejoignez-nous</h2>
+            <p>Prenons contact pour discuter de notre collaboration</p>
+
+            <!-- Right side - HubSpot Form -->
+                <div class="hubspot-form-white-box">
+                    <script src="https://js-eu1.hsforms.net/forms/embed/v2.js" charset="utf-8"></script>
+                    <script>
+                        hbspt.forms.create({
+                            region: "eu1",
+                            portalId: "147166352",
+                            formId: "1badffb2-5eb3-407c-8c89-79bb020e1f89"
+                        });
+                    </script>
+                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+         <!-- Colonne 1 -->
         <div class="footer-content">
             <div class="footer-section">
-                <h4>PILOTIMMO</h4>
-                <p>Expert en valorisation et gestion de patrimoine locatif</p>
+                <img src="assets/logo.png" alt="Pilotimmo" class="footer-logo" />
+                <h4 class="footer-title">PILOTIMMO</h4>
+                <p class="footer-text">Expert en valorisation et gestion de patrimoine locatif</p>
+                <p class="footer-text">Spécialistes des biens complexes : vacance, succession, passoires énergétiques</p>
             </div>
-            
+
+             <!-- Colonne 2 -->
             <div class="footer-section">
-                <h4>Navigation</h4>
-                <ul>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="partenaires.html">Partenaires</a></li>
-                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="recrutement.html">Nous rejoindre</a></li>
                 </ul>
             </div>
-            
+
+            <!-- Colonne 3 -->
             <div class="footer-section">
-                <h4>Ressources</h4>
-                <ul>
-                    <li><a href="recrutement.html">Recrutement</a></li>
+                <h4 class="footer-title">Informations</h4>
+                <ul class="footer-links">
+                    <li><a href="a-propos.html">À propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="cgu.html">CGU</a></li>
-                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="mentions-légales.html">Mentions légales</a></li>
                 </ul>
             </div>
-            
+
+            <!-- Colonne 4 -->
             <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Email : contact@pilotimmo.fr</p>
-                <p>Tél : 01 XX XX XX XX</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">in</a>
-                    <a href="#" aria-label="Facebook">f</a>
-                </div>
+                <h4 class="footer-title">Contactez nous </h4>
+                <p class="footer-text">Email : hello@pilotimmo.fr</p>
+                <p class="footer-text">Tél : 07.67.38.23.68 </p>
+                <p class="footer-text">  </p>
+                <p class="footer-text"><a href="contact.html" class="cta-nav">Diagnostic Offert</a></p>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Pilotimmo. Tous droits réservés.</p>
+            <p>&copy; 2025 Pilotimmo - Tous droits réservés.</p>
+        </div>
+    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pilotimmo - Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
