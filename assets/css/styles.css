@@ -801,10 +801,19 @@ p {
 }
 
 .footer-title {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: #fff; /* texte blanc */
+  color: #ffffff;    /* texte en blanc */
+  font-size: 24px;   /* taille 24px */
+  font-weight: bold; /* optionnel pour accentuer */
+  margin-bottom: 15px; /* espace sous le titre */
+}
+
+.footer-col ul li a {
+  color: #ffffff;       /* texte des liens en blanc */
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #FF6B00;       /* couleur CTA au survol */
 }
 
 .footer-text {
