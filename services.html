@@ -6,107 +6,8 @@
     <meta name="description" content="Nos services : valorisation de biens, gestion locative, pilotage patrimonial et accompagnement investisseurs. Solutions sur-mesure pour votre patrimoine.">
     <title>Nos Services - Pilotimmo | Valorisation & Gestion Patrimoine</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        .services-hero {
-            position: relative;
-            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        
-        .services-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.2);
-        }
-        
-        .services-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            color: white;
-        }
-        
-        .services-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .services-hero-subtitle {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            color: #fbbf24;
-        }
-        
-        .services-hero p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-        
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            padding: 40px 0;
-        }
-        
-        .trust-indicator {
-            text-align: center;
-            min-width: 180px;
-        }
-        
-        .trust-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2c5282;
-            margin-bottom: 0.5rem;
-        }
-        
-        .trust-label {
-            font-size: 1.1rem;
-            color: #4a5568;
-            font-weight: 500;
-        }
-        
-        @media (max-width: 768px) {
-            .services-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .services-hero-subtitle {
-                font-size: 1.4rem;
-            }
-            
-            .services-hero p {
-                font-size: 1rem;
-            }
-            
-            .trust-indicators {
-                gap: 30px;
-            }
-            
-            .trust-number {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="service.css">
 </head>
-
-
-
-    
 <body>
     <!-- Header -->
     <header class="header">
@@ -127,21 +28,21 @@
         </nav>
     </header>
 
-   <!-- Hero with Background -->
+    <!-- Hero Section -->
     <section class="services-hero">
-        <div class="services-hero-overlay"></div>
         <div class="services-hero-content">
             <h1>Nos Services</h1>
-            <p class="services-hero-subtitle">Experts en Biens Complexes</p>
-            <p>Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
+            <p>Experts en Biens Complexes<br>
+            Pilotimmo transforme vos défis immobiliers en opportunités rentables.<br>
+            Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title">Notre Expertise</h2>
-            <p class="section-subtitle">Des solutions complètes adaptées à chaque situation</p>
+            <h2 class="section-title">Des Solutions Pour Chaque Défi</h2>
+            <p class="section-subtitle">Quatre domaines d'expertise pour gérer les situations les plus complexes</p>
             
             <div class="grid grid-4 services-grid">
                 <!-- Service 1 -->
@@ -215,40 +116,32 @@
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h3 class="step-title">Diagnostic</h3>
-                        <p class="step-text">
-                            Analyse complète de votre patrimoine et identification des problématiques
-                        </p>
+                        <p class="step-text">Analyse complète de votre patrimoine et identification des problématiques</p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h3 class="step-title">Stratégie</h3>
-                        <p class="step-text">
-                            Plan d'action personnalisé avec timeline et budget détaillé
-                        </p>
+                        <p class="step-text">Plan d'action personnalisé avec timeline et budget détaillé</p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h3 class="step-title">Mise en Œuvre</h3>
-                        <p class="step-text">
-                            Déploiement des actions et coordination des intervenants
-                        </p>
+                        <p class="step-text">Déploiement des actions et coordination des intervenants</p>
                     </div>
                     
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h3 class="step-title">Suivi & Valorisation</h3>
-                        <p class="step-text">
-                            Pilotage continu et optimisation de la rentabilité
-                        </p>
+                        <p class="step-text">Pilotage continu et optimisation de la rentabilité</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
+    <!-- Trust Indicators Section -->
     <section class="section trust-section">
         <div class="container">
             <h2 class="section-title">Ils Nous Font Confiance</h2>
@@ -275,7 +168,7 @@
     <section class="cta-section">
         <div class="container">
             <h2 class="cta-title">Prêt à Retrouver Votre Sérénité ?</h2>
-            <p class="cta-text">Confiez-nous votre immobilier et concentrez-vous sur l'essentiel</p>
+            <p class="cta-text">Confiez-nous votre immobilier et concentrez-vous sur l’essentiel</p>
             <a href="contact.html" class="btn btn-primary btn-lg">Diagnostic Offert</a>
         </div>
     </section>
@@ -305,7 +198,7 @@
                     <li><a href="recrutement.html">Recrutement</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="cgu.html">CGU</a></li>
-                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="mentions-légales.html">Mentions légales</a></li>
                 </ul>
             </div>
             
