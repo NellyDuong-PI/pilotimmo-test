@@ -6,7 +6,107 @@
     <meta name="description" content="Nos services : valorisation de biens, gestion locative, pilotage patrimonial et accompagnement investisseurs. Solutions sur-mesure pour votre patrimoine.">
     <title>Nos Services - Pilotimmo | Valorisation & Gestion Patrimoine</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .services-hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .services-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .services-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            color: white;
+        }
+        
+        .services-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .services-hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #fbbf24;
+        }
+        
+        .services-hero p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .trust-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            padding: 40px 0;
+        }
+        
+        .trust-indicator {
+            text-align: center;
+            min-width: 180px;
+        }
+        
+        .trust-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trust-label {
+            font-size: 1.1rem;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services-hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .services-hero p {
+                font-size: 1rem;
+            }
+            
+            .trust-indicators {
+                gap: 30px;
+            }
+            
+            .trust-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
+
+
+
+    
 <body>
     <!-- Header -->
     <header class="header">
@@ -27,12 +127,13 @@
         </nav>
     </header>
 
-    <!-- Hero with Background Image -->
+   <!-- Hero with Background -->
     <section class="services-hero">
         <div class="services-hero-overlay"></div>
         <div class="services-hero-content">
             <h1>Nos Services</h1>
-            <p>Un accompagnement global pour transformer vos biens complexes en actifs performants</p>
+            <p class="services-hero-subtitle">Experts en Biens Complexes</p>
+            <p>Pilotimmo transforme vos défis immobiliers en opportunités rentables. Spécialistes des situations complexes, nous optimisons votre patrimoine.</p>
         </div>
     </section>
 
