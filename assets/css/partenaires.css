@@ -1,0 +1,264 @@
+
+/* ==============================
+   PARTENAIRES.CSS
+   ============================== */
+
+/* Général */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==============================
+   HERO
+   ============================== */
+.partners-hero {
+    position: relative;
+    background: url('../images/hero-partners.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.partners-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.partners-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.partners-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.partners-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* ==============================
+   SECTIONS
+   ============================== */
+.section {
+    padding: 80px 20px;
+}
+
+.section-light {
+    background-color: #f7f7f7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ==============================
+   BENEFITS & PROFESSIONAL TYPES
+   ============================== */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.grid-4 > div {
+    flex: 1 1 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.grid-4 > div:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon, .pro-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   KPI SECTION
+   ============================== */
+.kpi-section {
+    background-color: #111;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.kpi-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.kpi-card h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.kpi-card p {
+    font-size: 1.2em;
+}
+
+/* ==============================
+   PROCESS SECTION
+   ============================== */
+.process-section {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+}
+
+.process-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.process-section p {
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   CONTACT SECTION / HUBSPOT
+   ============================== */
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.hubspot-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   BUTTONS
+   ============================== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #e65500;
+}
+
+.btn-secondary {
+    background-color: #555;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 992px) {
+    .grid-4, .process-steps, .kpi-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .grid-4 > div, .step, .kpi-card {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-hero h1 {
+        font-size: 2em;
+    }
+    .benefit-icon, .pro-icon {
+        font-size: 2em;
+    }
+    .kpi-card h2 {
+        font-size: 2.2em;
+    }
+    .step-number {
+        font-size: 1.8em;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff6600, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
