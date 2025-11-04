@@ -1,3 +1,4 @@
+
 /* ===================================
    PILOTIMMO - STYLESHEET
    Version: 2.0
@@ -161,7 +162,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 var(--spacing-lg);
+    padding: 0 var(--spacing-lg);   
 }
 
 .logo {
@@ -172,6 +173,13 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Ajustement taille logo header */
+header .logo img {
+    max-width: 80px !important; /* réduit la largeur et force le style */
+    height: auto !important;     /* garde les proportions */
+    display: block;
 }
 
 .nav-links {
@@ -223,6 +231,8 @@ p {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
+
 
 /* ==========================================================================
    5. BUTTONS
@@ -791,6 +801,14 @@ p {
     padding: var(--spacing-xl) var(--spacing-lg);
 }
 
+/* ---- Logo footer ---- */
+footer img {
+    width: 120px;   /* taille par défaut sur desktop */
+    height: auto;
+    display: block;
+    margin: 0 ; 
+}
+
 .footer-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -971,7 +989,30 @@ p {
     .indicator-number {
         font-size: 1.5rem;
     }
+
+   @media (max-width: 1024px) {
+   .logo img {
+      width: 120px; /* légèrement plus petit sur tablette */
+   }
+
+   footer img {
+      width: 100px; /* logo footer réduit sur tablette */
+   }
 }
+
+   @media (max-width: 768px) {
+   .logo img {
+      width: 100px; /* taille mobile pour header */
+   }
+
+   footer img {
+      width: 80px;  /* taille mobile pour footer */
+   }
+}
+
+}
+
+
 
 /* ==========================================================================
    13. UTILITY CLASSES
@@ -994,3 +1035,34 @@ p {
 .visible { display: block; }
 
 
+
+/* ---- Ajustement logo header avec scroll ---- */
+.header.scrolled .logo img {
+    width: 120px;  /* réduit légèrement le logo quand le header scroll */
+    transition: width 0.3s; /* animation douce */
+}
+
+/* ---- Responsive pour tablettes et mobiles ---- */
+@media (max-width: 1024px) {
+    .logo img {
+        width: 120px;
+    }
+    .header.scrolled .logo img {
+        width: 100px;
+    }
+    footer img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 100px;
+    }
+    .header.scrolled .logo img {
+        width: 80px;
+    }
+    footer img {
+        width: 80px;
+    }
+}
