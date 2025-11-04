@@ -40,7 +40,7 @@ function initHeaderScroll() {
 // ==========================================================================
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
-    const increment = target / (duration / 16);
+    const increment = target / (duration / 16); // incrément pour ~60fps
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
@@ -52,7 +52,7 @@ function animateCounter(element, target, duration = 2000) {
     }, 16);
 }
 
-ffunction initCounters() {
+function initCounters() {
     const counters = document.querySelectorAll('.stat-number');
 
     const observer = new IntersectionObserver((entries) => {
@@ -71,3 +71,4 @@ ffunction initCounters() {
 document.addEventListener('DOMContentLoaded', () => {
     initCounters();
 });
+
