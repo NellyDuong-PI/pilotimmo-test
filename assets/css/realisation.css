@@ -37,25 +37,46 @@
 .project-badge { position: absolute; bottom: 10px; left: 10px; background: #007BFF; color: #fff; padding: 5
 
 
-                /* ===========================
-   Section Solutions (Vignettes)
+              /* ===========================
+   Section Solutions - Vignettes
 =========================== */
+.solutions-section {
+    padding: 60px 20px;
+    background-color: #f5f7fa;
+}
+
+.solutions-section .section-title h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #0A1F44; /* bleu foncé */
+}
+
+.solutions-section .section-subtitle {
+    text-align: center;
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 40px;
+}
+
+/* Grille vignettes */
 .solutions-grid {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
+/* Vignette individuelle */
 .solution-card {
     background-color: #fff;
     border-radius: 15px;
+    width: 250px;
     padding: 30px 20px;
-    width: 300px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
 }
 
 .solution-card:hover {
@@ -70,18 +91,16 @@
 }
 
 .solution-card h3 {
+    font-size: 1.25rem;
     margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #333;
+    color: #0A1F44;
 }
 
 .solution-card p {
     font-size: 0.95rem;
     color: #555;
-    line-height: 1.4;
+    line-height: 1.5;
 }
-
-
 
 /* ===========================
    Témoignages Modernisés
