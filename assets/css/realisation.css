@@ -41,10 +41,10 @@
    Section Solutions (Vignettes)
 =========================== */
 .solutions-grid {
-    display: flex;               /* Aligne les cartes sur une ligne */
-    justify-content: center;     /* Centre horizontalement */
-    gap: 30px;                   /* Espace entre les vignettes */
-    flex-wrap: wrap;             /* Passe à la ligne si l'écran est petit */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 
@@ -52,7 +52,7 @@
     background-color: #fff;
     border-radius: 15px;
     padding: 30px 20px;
-    width: 300px;                /* Largeur fixe pour chaque vignette */
+    width: 300px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -66,13 +66,12 @@
 .solution-icon {
     font-size: 3rem;
     margin-bottom: 15px;
-    display: inline-block;
     color: #007BFF;
 }
 
 .solution-card h3 {
-    font-size: 1.2rem;
     margin-bottom: 10px;
+    font-size: 1.2rem;
     color: #333;
 }
 
@@ -81,6 +80,7 @@
     color: #555;
     line-height: 1.4;
 }
+
 
 
 /* ===========================
