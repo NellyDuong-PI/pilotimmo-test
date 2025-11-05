@@ -37,7 +37,7 @@
 .project-badge { position: absolute; bottom: 10px; left: 10px; background: #007BFF; color: #fff; padding: 5
 
 
-              /* ===========================
+  /* ===========================
    Section Solutions - Vignettes
 =========================== */
 .solutions-section {
@@ -59,24 +59,23 @@
     margin-bottom: 40px;
 }
 
-/* Grille vignettes */
+/* Grille de vignettes */
 .solutions-grid {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* permet aux vignettes de passer à la ligne sur mobile */
 }
 
 /* Vignette individuelle */
 .solution-card {
     background-color: #fff;
     border-radius: 15px;
-    width: 250px;
+    width: 280px; /* largeur fixe pour mieux gérer l'affichage */
     padding: 30px 20px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
 }
 
 .solution-card:hover {
@@ -100,6 +99,19 @@
     font-size: 0.95rem;
     color: #555;
     line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .solutions-grid {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .solution-card {
+        width: 100%; /* vignettes empilées sur mobile */
+    }
 }
 
 /* ===========================
