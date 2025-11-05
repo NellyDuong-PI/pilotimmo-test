@@ -72,3 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
 });
 
+
+=========================================================================
+// 4. CARROUSEL IMAGE
+// ==========================================================================
+<!-- Swiper JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+    }
+  });
+</script>
