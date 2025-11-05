@@ -40,16 +40,17 @@
   /* ===========================
    Section Solutions - Vignettes
 =========================== */
+/* Container et section */
 .solutions-section {
-    padding: 60px 20px;
     background-color: #f5f7fa;
+    padding: 60px 20px;
 }
 
 .solutions-section .section-title h2 {
     text-align: center;
+    color: #0A1F44;
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #0A1F44; /* bleu foncé */
 }
 
 .solutions-section .section-subtitle {
@@ -57,21 +58,25 @@
     color: #555;
     font-size: 1.05rem;
     margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Grille de vignettes */
+/* Grille flex */
 .solutions-grid {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
-    flex-wrap: wrap; /* permet aux vignettes de passer à la ligne sur mobile */
 }
 
-/* Vignette individuelle */
+/* Vignettes */
 .solution-card {
     background-color: #fff;
     border-radius: 15px;
-    width: 280px; /* largeur fixe pour mieux gérer l'affichage */
+    flex: 1 1 250px;  /* minimum 250px, prend l’espace disponible */
+    max-width: 300px;
     padding: 30px 20px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -102,15 +107,15 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 900px) {
-    .solutions-grid {
-        justify-content: center;
+@media screen and (max-width: 768px) {
+    .solution-card {
+        flex: 1 1 45%;  /* deux par ligne sur tablette */
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 500px) {
     .solution-card {
-        width: 100%; /* vignettes empilées sur mobile */
+        flex: 1 1 100%;  /* une par ligne sur mobile */
     }
 }
 
