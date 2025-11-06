@@ -496,6 +496,8 @@ header .logo img {
     opacity: 0.8;
     margin-top: 0.5rem;
 }
+
+
 /* ==========================================================================
    7. CARDS & COMPONENTS
    ========================================================================== */
@@ -1050,7 +1052,7 @@ footer img {
     }
     
     .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25%, 280px), 1fr));
     }
     
     .process-line {
