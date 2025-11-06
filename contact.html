@@ -3,160 +3,565 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez Pilotimmo pour un diagnostic gratuit. Obtenez un échange conseil de 30min offert avec nos experts en valorisation immobilière.">
-    <title>Contact - Pilotimmo | Diagnostic Gratuit & Conseil Expert</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact.css">
+    <meta name="description" content="Contactez Pilotimmo - Obtenez un diagnostic gratuit pour valoriser votre patrimoine immobilier.">
+    <title>Contact - Pilotimmo | Diagnostic Gratuit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques à la page contact */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 50%, #334155 100%);
+            color: var(--white);
+            padding: 180px var(--spacing-lg) 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin-top: calc(var(--spacing-xl) * -1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .contact-info-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-info-card h2 {
+            margin-bottom: var(--spacing-md);
+            font-size: 2rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-method-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-method-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-method-text p {
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        .contact-method-text a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color var(--transition-normal);
+        }
+
+        .contact-method-text a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form-card {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form-card h2 {
+            margin-bottom: var(--spacing-md);
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-family);
+            font-size: 1rem;
+            transition: border-color var(--transition-normal);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+        }
+
+        .form-submit {
+            margin-top: var(--spacing-sm);
+        }
+
+        .benefits-section {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: var(--light);
+            border-radius: var(--radius-md);
+        }
+
+        .benefits-section h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.5rem 0;
+        }
+
+        .benefit-check {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .map-section {
+            background: var(--light);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .map-container {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 400px;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .faq-section {
+            margin-top: var(--spacing-xl);
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            margin-top: var(--spacing-sm);
+            color: var(--text);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform var(--transition-normal);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-hero {
+                padding: 140px 1.5rem 60px;
+            }
+        }
+    </style>
 </head>
-
-<!-- Bandeau cookies global -->
-<div id="cookie-banner" class="cookie-banner">
-  <div class="cookie-banner-inner">
-    <span>Ce site utilise des cookies pour améliorer votre expérience.</span>
-    <button id="accept-cookies">Accepter</button>
-    <button id="decline-cookies">Refuser</button>
-  </div>
-</div>
-
-<!-- Script cookies -->
-<script src="assets/js/cookies.js"></script>
-    
 <body>
-     <!-- Header Navigation -->
+    <!-- Header Navigation -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo-container">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/logo.png" alt="Logo Pilotimmo" class="logo-img">
-                    <div class="logo">PILOTIMMO</div>
-                </a>
-            </div>
+            <div class="logo">PILOTIMMO</div>
             <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="realisation.html">Realisations</a></li>
-                <li><a href="contact.html" class="cta-nav">Diagnostic Offert</a></li>
+                <li><a href="partenaires.html">Partenaires</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="contact.html" class="active cta-nav">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu mobile">☰</button>
         </nav>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <h1>Contactez-nous</h1>
-            <p>Obtenez un diagnostic gratuit et personnalisé</p>
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Parlons de votre projet</h1>
+            <p>Obtenez un diagnostic gratuit et personnalisé en moins de 48h</p>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Main Contact Section -->
     <section class="section">
         <div class="container">
-            <div class="cta-content-wrapper">
-                <!-- Left side - Benefits -->
-                <div class="cta-benefits">
-                    <h2 style="color: var(--primary); margin-bottom: 2rem;">Pourquoi nous contacter ?</h2>
-                    <div class="benefit-item" style="background: var(--light);">
-                        <span class="benefit-check" style="background: linear-gradient(135deg, var(--secondary), var(--accent));">✓</span>
-                        <span class="benefit-text" style="color: var(--primary);">Échange Conseil 30min offert</span>
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info-card">
+                    <h2>Nos coordonnées</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-method-icon">📧</div>
+                        <div class="contact-method-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:contact@pilotimmo.fr">contact@pilotimmo.fr</a></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.3rem;">Réponse sous 24h ouvrées</p>
+                        </div>
                     </div>
-                    <div class="benefit-item" style="background: var(--light);">
-                        <span class="benefit-check" style="background: linear-gradient(135deg, var(--secondary), var(--accent));">✓</span>
-                        <span class="benefit-text" style="color: var(--primary);">Avis d'expert</span>
+
+                    <div class="contact-method">
+                        <div class="contact-method-icon">📞</div>
+                        <div class="contact-method-text">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+33XXXXXXXXX">01 XX XX XX XX</a></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.3rem;">Lun-Ven : 9h-18h</p>
+                        </div>
                     </div>
-                    <div class="benefit-item" style="background: var(--light);">
-                        <span class="benefit-check" style="background: linear-gradient(135deg, var(--secondary), var(--accent));">✓</span>
-                        <span class="benefit-text" style="color: var(--primary);">Solution simple à mettre en place</span>
+
+                    <div class="contact-method">
+                        <div class="contact-method-icon">📍</div>
+                        <div class="contact-method-text">
+                            <h3>Adresse</h3>
+                            <p>123 Avenue de la République<br>75011 Paris, France</p>
+                        </div>
                     </div>
-                    <div class="benefit-item" style="background: var(--light);">
-                        <span class="benefit-check" style="background: linear-gradient(135deg, var(--secondary), var(--accent));">✓</span>
-                        <span class="benefit-text" style="color: var(--primary);">Pas de blabla, que du concret</span>
-                    </div>
-                    <div class="benefit-item" style="background: var(--light);">
-                        <span class="benefit-check" style="background: linear-gradient(135deg, var(--secondary), var(--accent));">✓</span>
-                        <span class="benefit-text" style="color: var(--primary);">Trouver des solutions à vos problèmes</span>
+
+                    <div class="benefits-section">
+                        <h3>Pourquoi nous contacter ?</h3>
+                        <div class="benefit-item">
+                            <span class="benefit-check">✓</span>
+                            <span>Diagnostic gratuit de votre patrimoine</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-check">✓</span>
+                            <span>Échange conseil de 30min offert</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-check">✓</span>
+                            <span>Avis d'expert sans engagement</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-check">✓</span>
+                            <span>Solutions concrètes et actionnables</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-check">✓</span>
+                            <span>Réponse rapide et personnalisée</span>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Right side - HubSpot Form -->
-                <div class="hubspot-form-container">
-                    <script src="https://js-eu1.hsforms.net/forms/embed/v2.js" charset="utf-8"></script>
-                    <script>
-                        hbspt.forms.create({
-                            region: "eu1",
-                            portalId: "147166352",
-                            formId: "1badffb2-5eb3-407c-8c89-79bb020e1f89"
-                        });
-                    </script>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card">
+                    <h2>Demander un diagnostic</h2>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profil">Vous êtes *</label>
+                            <select id="profil" name="profil" required>
+                                <option value="">Sélectionnez votre profil</option>
+                                <option value="proprietaire">Propriétaire avec un bien problématique</option>
+                                <option value="investisseur">Investisseur à la recherche d'opportunités</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="problematique">Votre problématique *</label>
+                            <select id="problematique" name="problematique" required>
+                                <option value="">Sélectionnez une problématique</option>
+                                <option value="vacant">Bien vacant depuis plusieurs mois</option>
+                                <option value="dpe">Passoire énergétique (DPE F ou G)</option>
+                                <option value="succession">Succession / Héritage complexe</option>
+                                <option value="impayes">Impayés de loyers</option>
+                                <option value="rentabilite">Baisse de rentabilité</option>
+                                <option value="investissement">Recherche d'opportunités d'investissement</option>
+                                <option value="autre">Autre problématique</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ville">Ville du bien</label>
+                            <input type="text" id="ville" name="ville" placeholder="Ex: Paris, Lyon, Marseille...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message / Détails de votre situation *</label>
+                            <textarea id="message" name="message" required placeholder="Décrivez-nous brièvement votre situation et vos objectifs..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400;">
+                                <input type="checkbox" required style="width: auto;">
+                                <span>J'accepte d'être contacté par Pilotimmo concernant ma demande *</span>
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                                Envoyer ma demande
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Info -->
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Notre localisation</h2>
+            <p class="section-subtitle">Venez nous rencontrer dans nos bureaux parisiens</p>
+            
+            <div class="map-container">
+                <!-- Intégrez ici votre carte Google Maps ou autre -->
+                <p>🗺️ Carte à intégrer (Google Maps, OpenStreetMap, etc.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
     <section class="section section-light">
         <div class="container">
-            <h2 class="section-title">Nos Coordonnées</h2>
-            <div class="grid grid-3">
-                <div class="contact-info-card">
-                    <span class="contact-icon">📧</span>
-                    <h3>Email</h3>
-                    <p>contact@pilotimmo.fr</p>
+            <h2 class="section-title">Questions fréquentes</h2>
+            <p class="section-subtitle">Tout ce que vous devez savoir avant de nous contacter</p>
+
+            <div class="faq-section">
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Le diagnostic est-il vraiment gratuit ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, absolument ! Nous offrons un premier diagnostic gratuit et sans engagement de votre patrimoine. Cela nous permet de comprendre votre situation et de vous proposer des solutions adaptées. Vous ne payez que si vous décidez de travailler avec nous.
+                    </div>
                 </div>
-                <div class="contact-info-card">
-                    <span class="contact-icon">📞</span>
-                    <h3>Téléphone</h3>
-                    <p>01 XX XX XX XX</p>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Sous quel délai allez-vous me répondre ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nous nous engageons à vous répondre sous 24h ouvrées maximum. Pour les demandes urgentes, n'hésitez pas à nous appeler directement.
+                    </div>
                 </div>
-                <div class="contact-info-card">
-                    <span class="contact-icon">📍</span>
-                    <h3>Adresse</h3>
-                    <p>Paris, France</p>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Intervenez-vous partout en France ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nous intervenons principalement en Île-de-France et dans les grandes métropoles françaises (Lyon, Marseille, Bordeaux, Toulouse, Lille, Nantes). Pour les autres régions, contactez-nous pour étudier la faisabilité de votre projet.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Quels types de biens gérez-vous ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nous gérons tous types de biens résidentiels : appartements, maisons, immeubles de rapport. Nous sommes spécialisés dans les biens "complexes" : biens vacants, passoires énergétiques, successions, biens avec impayés, etc.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Comment se déroule un premier rendez-vous ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Le premier rendez-vous dure environ 30 minutes et peut se faire en visio, par téléphone ou dans nos bureaux. Nous analysons votre situation, vos objectifs et vous proposons un premier plan d'action. C'est un échange gratuit et sans engagement.
+                    </div>
+                </div>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">
+                        <span>Proposez-vous le rachat de biens ?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Oui, si c'est la meilleure solution pour vous. Nous pouvons vous faire une offre de rachat rapide si vous souhaitez vous séparer de votre bien. Notre objectif est de toujours vous proposer la solution la plus avantageuse pour vous.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- Footer -->
-    <footer class="footer">
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Prêt à valoriser votre patrimoine ?</h2>
+            <p class="cta-text">Prenez rendez-vous dès maintenant pour un diagnostic gratuit</p>
+            <a href="#contactForm" class="btn btn-primary btn-lg">Remplir le formulaire</a>
+        </div>
+    </section>
 
-         <!-- Colonne 1 -->
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <img src="assets/images/logo.png" alt="Pilotimmo" class="footer-logo" />
                 <h4 class="footer-title">PILOTIMMO</h4>
                 <p class="footer-text">Expert en valorisation et gestion de patrimoine locatif</p>
                 <p class="footer-text">Spécialistes des biens complexes : vacance, succession, passoires énergétiques</p>
             </div>
-
-             <!-- Colonne 2 -->
+            
             <div class="footer-section">
                 <h4 class="footer-title">Navigation</h4>
                 <ul class="footer-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="partenaires.html">Partenaires</a></li>
-                    <li><a href="recrutement.html">Nous rejoindre</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
                 </ul>
             </div>
-
-            <!-- Colonne 3 -->
+            
             <div class="footer-section">
-                <h4 class="footer-title">Informations</h4>
+                <h4 class="footer-title">Ressources</h4>
                 <ul class="footer-links">
-                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="cgu.html">CGU</a></li>
-                    <li><a href="mentions-légales.html">Mentions légales</a></li>
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
                 </ul>
             </div>
-
-            <!-- Colonne 4 -->
+            
             <div class="footer-section">
-                <h4 class="footer-title">Contactez nous </h4>
-                <p class="footer-text">Email : hello@pilotimmo.fr</p>
-                <p class="footer-text">Tél : 07.67.38.23.68 </p>
-                <p class="footer-text">  </p>
-                <p class="footer-text"><a href="contact.html" class="cta-nav">Diagnostic Offert</a></p>
+                <h4 class="footer-title">Contact</h4>
+                <p class="footer-text">Email : contact@pilotimmo.fr</p>
+                <p class="footer-text">Tél : 01 XX XX XX XX</p>
             </div>
         </div>
         
@@ -165,29 +570,33 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script>
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
 
-        <script src="assets/js/script.js"></script>
-    
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Ici, ajoutez votre logique d'envoi de formulaire
+            // (envoi vers un serveur, intégration avec un service d'emailing, etc.)
+            
+            alert('Merci pour votre message ! Nous vous répondrons dans les 24h.');
+            this.reset();
         });
 
-        // Header scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.pageYOffset > 100) {
-                header.style.padding = '0.8rem 0';
-            } else {
-                header.style.padding = '1.2rem 0';
-            }
+        // Smooth scroll to form
+        document.querySelectorAll('a[href="#contactForm"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('contactForm').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
         });
     </script>
 </body>
