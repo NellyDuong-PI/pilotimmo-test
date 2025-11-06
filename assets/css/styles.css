@@ -362,6 +362,10 @@ header .logo img {
     margin-right: auto;
 }
 
+.hero-white-text {
+    color: white;
+}
+
 .highlight {
     background: linear-gradient(135deg, var(--secondary), var(--accent));
     -webkit-background-clip: text;
