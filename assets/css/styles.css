@@ -177,7 +177,7 @@ p {
 
 /* Ajustement taille logo header */
 header .logo img {
-    max-width: 80px !important; /* réduit la largeur et force le style */
+    max-width: 40px !important; /* réduit la largeur et force le style */
     height: auto !important;     /* garde les proportions */
     display: block;
 }
@@ -232,6 +232,62 @@ header .logo img {
     cursor: pointer;
 }
 
+/* --- afficher le bouton sur mobile --- */
+
+@media (max-width: 768px) {
+  /* Le bouton menu */
+  .mobile-menu-btn {
+    display: block;
+    position: relative;
+    z-index: 2000;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* Masquer le menu par défaut */
+  .nav-links {
+    display: none;          /* caché par défaut */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;              /* adapte à la hauteur de ton header */
+    right: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+    z-index: 1000;
+  }
+
+  /* Afficher le menu quand actif */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Styles des items du menu */
+  .nav-links li {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+  }
+
+  .nav-links li a.cta-nav {
+    background: #007BFF; /* couleur bouton Diagnostic Offert */
+    color: #fff;
+    border-radius: 4px;
+  }
+}
 
 
 /* ==========================================================================
@@ -589,6 +645,47 @@ header .logo img {
     margin-bottom: var(--spacing-md);
     opacity: 0.9;
 }
+
+/* Conteneur principal */
+.cta-form-wrapper {
+    display: flex;
+    flex-direction: column; /* texte au-dessus du formulaire */
+    align-items: center; /* centre horizontalement */
+    gap: 2rem; /* espace entre texte et formulaire */
+    padding: 2rem; /* optionnel, espace autour */
+}
+
+/* Bénéfices */
+.cta-benefits-box {
+    text-align: center; /* centre le texte et les icônes */
+}
+
+/* Titre des bénéfices */
+.benefits-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Chaque ligne de bénéfice */
+.benefit-item-white {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centre les items horizontalement */
+    margin-bottom: 0.5rem;
+}
+
+/* Icône ✓ */
+.benefit-check-white {
+    color: #28a745; /* vert check */
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Texte du bénéfice */
+.benefit-text-dark {
+    color: #333;
+}
+
 
 /* ==========================================================================
    9.5 WHO WE ARE SECTION
