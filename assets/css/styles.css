@@ -129,10 +129,21 @@ p {
     gap: var(--spacing-md);
 }
 
+/* 2 et 3 colonnes classiques */
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
+/* Grille 4 colonnes auto-adaptative */
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25%, 280px), 1fr));
+}
+
+/* Mobile : une seule colonne */
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
 /* ==========================================================================
    4. HEADER & NAVIGATION
    ========================================================================== */
