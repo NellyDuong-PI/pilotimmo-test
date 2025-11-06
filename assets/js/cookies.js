@@ -1,4 +1,3 @@
-
 // === Bandeau Cookies Global ===
 
 // Vérifie si l'utilisateur a déjà fait un choix
