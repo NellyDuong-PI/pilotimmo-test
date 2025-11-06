@@ -1,8 +1,7 @@
-
 /* ===================================
    PILOTIMMO - STYLESHEET
-   Version: 2.0
-   Description: Clean & Organized CSS
+   Version: 2.1
+   Description: Clean & Organized CSS - Responsive fixes
    =================================== */
 
 /* ==========================================================================
@@ -17,14 +16,14 @@
     --light: #f8fafc;
     --text: #334155;
     --white: #ffffff;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
-    
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-size-base: 1rem;
@@ -33,17 +32,17 @@
     --font-size-2xl: 2rem;
     --font-size-3xl: 3rem;
     --font-size-4xl: 4rem;
-    
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.6s ease;
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
-    
+
     /* Border Radius */
     --radius-sm: 10px;
     --radius-md: 15px;
@@ -52,6 +51,7 @@
     --radius-full: 50px;
 }
 
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
@@ -177,8 +177,8 @@ p {
 
 /* Ajustement taille logo header */
 header .logo img {
-    max-width: 40px !important; /* réduit la largeur et force le style */
-    height: auto !important;     /* garde les proportions */
+    max-width: 40px !important;
+    height: auto !important;
     display: block;
 }
 
@@ -232,919 +232,149 @@ header .logo img {
     cursor: pointer;
 }
 
-/* --- afficher le bouton sur mobile --- */
-
-@media (max-width: 768px) {
-  /* Le bouton menu */
-  .mobile-menu-btn {
-    display: block;
-    position: relative;
-    z-index: 2000;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-
-  /* Masquer le menu par défaut */
-  .nav-links {
-    display: none;          /* caché par défaut */
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 60px;              /* adapte à la hauteur de ton header */
-    right: 0;
-    width: 100%;
-    background: #fff;
-    padding: 1rem 0;
-    z-index: 1000;
-  }
-
-  /* Afficher le menu quand actif */
-  .nav-links.active {
-    display: flex;
-  }
-
-  /* Styles des items du menu */
-  .nav-links li {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-
-  .nav-links li a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-  }
-
-  .nav-links li a.cta-nav {
-    background: #007BFF; /* couleur bouton Diagnostic Offert */
-    color: #fff;
-    border-radius: 4px;
-  }
-}
-
-
-/* ==========================================================================
-   5. BUTTONS
-   ========================================================================== */
-
-.btn {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    border-radius: var(--radius-full);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: var(--font-size-base);
-    transition: all var(--transition-normal);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--secondary), #2563eb);
-    color: var(--white);
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
-}
-
-.btn-lg {
-    padding: 1.2rem 3rem;
-    font-size: var(--font-size-lg);
-}
-
-/* ==========================================================================
-   6. HERO SECTION
-   ========================================================================== */
-
-.hero {
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 50%, #334155 100%);
-    color: var(--white);
-    padding: 180px var(--spacing-lg) 120px;
-    position: relative;
-    overflow: hidden;
-    min-height: 700px;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
-    z-index: 0;
-}
-
-.hero-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    animation: fadeInUp 0.8s ease;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.highlight {
-    background: linear-gradient(135deg, var(--secondary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-description {
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
-    animation: fadeInUp 0.8s ease 0.2s both;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Persona Cards in Hero */
-.persona-selector {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 3rem auto 0;
-    animation: fadeInUp 0.8s ease 0.4s both;
-}
-
-.persona-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--radius-xl);
-    padding: 2.5rem;
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    text-align: left;
-}
-
-.persona-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--accent);
-    box-shadow: var(--shadow-lg);
-}
-
-.persona-card h3 {
-    font-size: 1.8rem;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-}
-
-.persona-card .subtitle {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 2rem;
-    font-style: italic;
-}
-
-.persona-card ul {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.persona-card li {
-    padding: 0.7rem 0;
-    color: rgba(255, 255, 255, 0.9);
-    position: relative;
-    padding-left: 2rem;
-    font-size: 0.95rem;
-}
-
-.persona-card li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.persona-card .btn {
-    width: 100%;
-}
-
-.hero-stats {
-    display: flex;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-    justify-content: center;
-    animation: fadeInUp 0.8s ease 0.6s both;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent);
-}
-
-.stat-symbol,
-.stat-prefix {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent);
-}
-
-.stat-label {
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-top: 0.5rem;
-}
-
-/* ==========================================================================
-   7. CARDS & COMPONENTS
-   ========================================================================== */
-
-.card {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid transparent;
-    position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary), var(--accent));
-    transform: scaleX(0);
-    transition: transform 0.4s;
-}
-
-.card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--secondary);
-}
-
-.card-hover:hover::before {
-    transform: scaleX(1);
-}
-
-.card-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: var(--spacing-sm);
-}
-
-.card-title {
-    font-size: 1.6rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.card-text {
-    line-height: 1.8;
-}
-
-/* Service Cards */
-.service-card {
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
-    color: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-xl);
-    transition: transform 0.4s;
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-    transition: transform var(--transition-slow);
-}
-
-.service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-
-.service-card:hover::before {
-    transform: translate(-25%, -25%);
-}
-
-.service-icon {
-    font-size: 3rem;
-    display: block;
-    margin-bottom: 1.5rem;
-}
-
-.service-title {
-    color: var(--white);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 1;
-}
-
-.service-list {
-    list-style: none;
-    position: relative;
-    z-index: 1;
-}
-
-.service-list li {
-    padding: 0.8rem 0 0.8rem 2rem;
-    position: relative;
-    opacity: 0.9;
-}
-
-.service-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* ==========================================================================
-   8. PROCESS SECTION
-   ========================================================================== */
-
-.process {
-    position: relative;
-    margin-top: var(--spacing-xl);
-}
-
-.process-line {
-    position: absolute;
-    top: 50px;
-    left: 10%;
-    right: 10%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--secondary), var(--accent));
-    z-index: 0;
-}
-
-.process-step {
-    text-align: center;
-    background: var(--white);
-    padding: 2.5rem 1.5rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s;
-    position: relative;
-    z-index: 1;
-}
-
-.process-step:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-}
-
-.step-number {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--secondary), var(--accent));
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-}
-
-.step-title {
-    margin-bottom: var(--spacing-sm);
-}
-
-.step-text {
-    font-size: 0.95rem;
-}
-
-/* ==========================================================================
-   9. CTA SECTION
-   ========================================================================== */
-
-.cta-section {
-    background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
-    color: var(--white);
-    text-align: center;
-    padding: 80px var(--spacing-lg);
-}
-
-.cta-title {
-    color: var(--white);
-    margin-bottom: var(--spacing-sm);
-}
-
-.cta-text {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-    opacity: 0.9;
-}
-
-/* Conteneur principal */
-.cta-form-wrapper {
-    display: flex;
-    flex-direction: column; /* texte au-dessus du formulaire */
-    align-items: center; /* centre horizontalement */
-    gap: 2rem; /* espace entre texte et formulaire */
-    padding: 2rem; /* optionnel, espace autour */
-}
-
-/* Bénéfices */
-.cta-benefits-box {
-    text-align: center; /* centre le texte et les icônes */
-}
-
-/* Titre des bénéfices */
-.benefits-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* Chaque ligne de bénéfice */
-.benefit-item-white {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* centre les items horizontalement */
-    margin-bottom: 0.5rem;
-}
-
-/* Icône ✓ */
-.benefit-check-white {
-    color: #28a745; /* vert check */
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
-
-/* Texte du bénéfice */
-.benefit-text-dark {
-    color: #333;
-}
-
-
-/* ==========================================================================
-   9.5 WHO WE ARE SECTION
-   ========================================================================== */
-
-.who-we-are {
-    background: var(--white);
-}
-
-.who-grid {
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-xl);
-}
-
-.who-card {
-    background: var(--white);
-    border-radius: var(--radius-xl);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-md);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
-}
-
-.who-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-}
-
-.who-card-investor {
-    border-color: rgba(59, 130, 246, 0.2);
-}
-
-.who-card-investor:hover {
-    border-color: var(--secondary);
-}
-
-.who-card-owner {
-    border-color: rgba(245, 158, 11, 0.2);
-}
-
-.who-card-owner:hover {
-    border-color: var(--accent);
-}
-
-.who-card-header {
-    text-align: center;
-    margin-bottom: var(--spacing-md);
-}
-
-.who-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--secondary), var(--accent));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--spacing-sm);
-    font-size: 2.5rem;
-    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-}
-
-.who-card-owner .who-icon {
-    background: linear-gradient(135deg, var(--accent), #f97316);
-}
-
-.who-card-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-}
-
-.who-card-subtitle {
-    color: var(--text);
-    opacity: 0.8;
-    font-size: 1.05rem;
-}
-
-.who-card-content {
-    flex: 1;
-    margin-bottom: var(--spacing-md);
-}
-
-.who-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: var(--radius-sm);
-    transition: background-color var(--transition-fast);
-}
-
-.who-feature:hover {
-    background-color: var(--light);
-}
-
-.feature-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--light);
-    border-radius: 50%;
-}
-
-.feature-text h4 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    color: var(--primary);
-}
-
-.feature-text p {
-    font-size: 0.95rem;
-    color: var(--text);
-    opacity: 0.8;
-    line-height: 1.5;
-}
-
-.btn-investor,
-.btn-owner {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-size: 1.05rem;
-    padding: 1.2rem 2rem;
-    background: linear-gradient(135deg, var(--secondary), #2563eb);
-    border: none;
-}
-
-.btn-owner {
-    background: linear-gradient(135deg, var(--accent), #f97316);
-}
-
-.btn-arrow {
-    transition: transform var(--transition-normal);
-    font-size: 1.3rem;
-}
-
-.btn-investor:hover .btn-arrow,
-.btn-owner:hover .btn-arrow {
-    transform: translateX(5px);
-}
-
-/* Success Indicators */
-.success-indicators {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
-    padding-top: var(--spacing-xl);
-    border-top: 2px solid var(--light);
-}
-
-.indicator {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--light);
-    border-radius: var(--radius-md);
-    transition: all var(--transition-normal);
-}
-
-.indicator:hover {
-    background: white;
-    box-shadow: var(--shadow-sm);
-    transform: translateY(-5px);
-}
-
-.indicator-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--secondary), var(--accent));
-    color: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.indicator-number {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.indicator-label {
-    font-size: 0.95rem;
-    color: var(--text);
-    opacity: 0.8;
-}
-
-/* ==========================================================================
-   10. FOOTER
-   ========================================================================== */
-
-.footer {
-    background: var(--primary);
-    color: var(--white);
-    padding: var(--spacing-xl) var(--spacing-lg);
-}
-
-/* ---- Logo footer ---- */
-footer img {
-    width: 120px;   /* taille par défaut sur desktop */
-    height: auto;
-    display: block;
-    margin: 0 ; 
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-md);
-}
-
-.footer-title {
-  color: #ffffff;    /* texte en blanc */
-  font-size: 24px;   /* taille 24px */
-  font-weight: bold; /* optionnel pour accentuer */
-  margin-bottom: 15px; /* espace sous le titre */
-}
-
-.footer-col ul li a {
-  color: #ffffff;       /* texte des liens en blanc */
-  text-decoration: none;
-}
-
-.footer-col ul li a:hover {
-  color: #FF6B00;       /* couleur CTA au survol */
-}
-
-.footer-text {
-    opacity: 0.8;
-    margin: 0.5rem 0;
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links a {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.8;
-    transition: opacity var(--transition-fast);
-    display: inline-block;
-    margin: 0.3rem 0;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0.6;
-}
-
-/* ==========================================================================
-   11. ANIMATIONS
-   ========================================================================== */
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
 /* ==========================================================================
    12. RESPONSIVE DESIGN
    ========================================================================== */
 
-@media (max-width: 1200px) {
-    .hero-content {
-        grid-template-columns: 1fr;
+/* Tablette */
+@media (max-width: 1024px) {
+    .logo img {
+        width: 120px;
     }
-    
-    .floating-cards {
-        display: none;
+
+    .header.scrolled .logo img {
+        width: 100px;
     }
-    
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-    
-   .grid-4 {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-}
-    
-    .process-line {
-        display: none;
+
+    footer img {
+        width: 100px;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     :root {
         --spacing-lg: 1.5rem;
         --font-size-4xl: 2.5rem;
         --font-size-3xl: 2rem;
     }
-    
+
     .nav-links {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #fff;
+        padding: 1rem 0;
+        z-index: 1000;
     }
-    
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+    }
+
+    .nav-links li a.cta-nav {
+        background: #007BFF;
+        color: #fff;
+        border-radius: 4px;
+    }
+
     .mobile-menu-btn {
         display: block;
     }
-    
+
     .hero {
         padding: 140px 1.5rem 80px;
     }
-    
+
     .hero-stats {
         flex-direction: column;
         gap: 1.5rem;
     }
-    
+
     .section {
         padding: 60px 1.5rem;
     }
-    
+
     .grid-4,
     .grid-3,
     .grid-2 {
         grid-template-columns: 1fr;
     }
-    
+
     /* Who We Are Responsive */
     .who-grid {
         gap: var(--spacing-md);
     }
-    
+
     .who-card {
         padding: var(--spacing-md);
     }
-    
+
     .who-icon {
         width: 60px;
         height: 60px;
         font-size: 2rem;
     }
-    
+
     .who-card-title {
         font-size: 1.5rem;
     }
-    
+
     .who-card-subtitle {
         font-size: 0.95rem;
     }
-    
+
     .who-feature {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-    
+
     .success-indicators {
         grid-template-columns: 1fr;
         gap: var(--spacing-sm);
     }
-    
+
     .indicator {
         padding: 1rem;
     }
-    
+
     .indicator-number {
         font-size: 1.5rem;
     }
 
-   @media (max-width: 1024px) {
-   .logo img {
-      width: 120px; /* légèrement plus petit sur tablette */
-   }
+    /* Logo responsive pour mobile */
+    .logo img {
+        width: 100px;
+    }
 
-   footer img {
-      width: 100px; /* logo footer réduit sur tablette */
-   }
+    .header.scrolled .logo img {
+        width: 80px;
+    }
+
+    footer img {
+        width: 80px;
+    }
 }
-
-   @media (max-width: 768px) {
-   .logo img {
-      width: 100px; /* taille mobile pour header */
-   }
-
-   footer img {
-      width: 80px;  /* taille mobile pour footer */
-   }
-}
-
-}
-
-
 
 /* ==========================================================================
    13. UTILITY CLASSES
@@ -1166,35 +396,7 @@ footer img {
 .hidden { display: none; }
 .visible { display: block; }
 
-
-
 /* ---- Ajustement logo header avec scroll ---- */
 .header.scrolled .logo img {
-    width: 120px;  /* réduit légèrement le logo quand le header scroll */
     transition: width 0.3s; /* animation douce */
-}
-
-/* ---- Responsive pour tablettes et mobiles ---- */
-@media (max-width: 1024px) {
-    .logo img {
-        width: 120px;
-    }
-    .header.scrolled .logo img {
-        width: 100px;
-    }
-    footer img {
-        width: 100px;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo img {
-        width: 100px;
-    }
-    .header.scrolled .logo img {
-        width: 80px;
-    }
-    footer img {
-        width: 80px;
-    }
 }
