@@ -95,52 +95,18 @@
                 <!-- Contact Form -->
                 <div class="contact-form-card">
                     <h2>Demander un diagnostic</h2>
-                    <form id="contactForm" action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="prenom">Prénom *</label>
-                                <input type="text" id="prenom" name="prenom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nom">Nom *</label>
-                                <input type="text" id="nom" name="nom" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone">Téléphone *</label>
-                                <input type="tel" id="telephone" name="telephone" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="profil">Vous êtes *</label>
-                            <select id="profil" name="profil" required>
-                                <option value="">Sélectionnez votre profil</option>
-                                <option value="proprietaire">Propriétaire avec un bien problématique</option>
-                                <option value="investisseur">Investisseur à la recherche d'opportunités</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="problematique">Votre problématique *</label>
-                            <select id="problematique" name="problematique" required>
-                                <option value="">Sélectionnez une problématique</option>
-                                <option value="vacant">Bien vacant depuis plusieurs mois</option>
-                                <option value="dpe">Passoire énergétique (DPE F ou G)</option>
-                                <option value="succession">Succession / Héritage complexe</option>
-                                <option value="impayes">Impayés de loyers</option>
-                                <option value="rentabilite">Baisse de rentabilité</option>
-                                <option value="investissement">Recherche d'opportunités d'investissement</option>
-                                <option value="autre">Autre problématique</option>
-                            </select>
-                        </div>
+                    <!-- Right side - HubSpot Form -->
+            <div class="hubspot-form-white-box">
+                <script src="https://js-eu1.hsforms.net/forms/embed/v2.js" charset="utf-8"></script>
+                <script>
+                    hbspt.forms.create({
+                        region: "eu1",
+                        portalId: "147166352",
+                        formId: "1badffb2-5eb3-407c-8c89-79bb020e1f89"
+                    });
+                </script>
+            </div>
+        </div>
 
                         <div class="form-group">
                             <label for="ville">Ville du bien</label>
