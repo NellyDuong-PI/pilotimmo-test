@@ -133,9 +133,11 @@ p {
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-/* Grille 4 colonnes auto-adaptative */
 .grid-4 {
+    display: grid;
+    gap: var(--spacing-md);
     grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25%, 280px), 1fr));
+}
 }
 
 /* Mobile : une seule colonne */
