@@ -8,18 +8,34 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
 </head>
+
+<!-- Bandeau cookies global -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-banner-inner">
+    <span>Ce site utilise des cookies pour améliorer votre expérience.</span>
+    <button id="accept-cookies">Accepter</button>
+    <button id="decline-cookies">Refuser</button>
+  </div>
+</div>
+
+<!-- Script cookies -->
+<script src="assets/js/cookies.js"></script>
+
+    
 <body>
     <!-- Header Navigation -->
     <header class="header">
         <nav class="nav-container">
-            <div class="logo">PILOTIMMO</div>
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="images/logo.png" alt="Logo Pilotimmo" class="logo-img">
+                    <div class="logo">PILOTIMMO</div>
+                </a>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="partenaires.html">Partenaires</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="recrutement.html">Recrutement</a></li>
-                <li><a href="contact.html" class="active cta-nav">Contact</a></li>
+                <li><a href="realisation.html">Realisations</a></li>
+                <li><a href="contact.html" class="cta-nav">Diagnostic Offert</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu mobile">☰</button>
         </nav>
@@ -45,7 +61,7 @@
                         <div class="contact-method-icon">📧</div>
                         <div class="contact-method-text">
                             <h3>Email</h3>
-                            <p><a href="mailto:contact@pilotimmo.fr">contact@pilotimmo.fr</a></p>
+                            <p><a href="mailto:hello@pilotimmo.fr">hello@pilotimmo.fr</a></p>
                             <p style="font-size: 0.9rem; margin-top: 0.3rem;">Réponse sous 24h ouvrées</p>
                         </div>
                     </div>
@@ -54,24 +70,16 @@
                         <div class="contact-method-icon">📞</div>
                         <div class="contact-method-text">
                             <h3>Téléphone</h3>
-                            <p><a href="tel:+33XXXXXXXXX">01 XX XX XX XX</a></p>
+                            <p><a href="tel:+33XXXXXXXXX">07 27 38 23 68</a></p>
                             <p style="font-size: 0.9rem; margin-top: 0.3rem;">Lun-Ven : 9h-18h</p>
                         </div>
                     </div>
 
-                    <div class="contact-method">
-                        <div class="contact-method-icon">📍</div>
-                        <div class="contact-method-text">
-                            <h3>Adresse</h3>
-                            <p>123 Avenue de la République<br>75011 Paris, France</p>
-                        </div>
-                    </div>
-
-                    <div class="benefits-section">
+                   <div class="benefits-section">
                         <h3>Pourquoi nous contacter ?</h3>
                         <div class="benefit-item">
                             <span class="benefit-check">✓</span>
-                            <span>Diagnostic gratuit de votre patrimoine</span>
+                            <span>Diagnostic offert de votre patrimoine</span>
                         </div>
                         <div class="benefit-item">
                             <span class="benefit-check">✓</span>
@@ -95,8 +103,9 @@
                 <!-- Contact Form -->
                 <div class="contact-form-card">
                     <h2>Demander un diagnostic</h2>
-                    <!-- Right side - HubSpot Form -->
-            <div class="hubspot-form-white-box">
+                    
+                <!-- Right side - HubSpot Form -->
+                <div class="hubspot-form-white-box">
                 <script src="https://js-eu1.hsforms.net/forms/embed/v2.js" charset="utf-8"></script>
                 <script>
                     hbspt.forms.create({
@@ -105,33 +114,10 @@
                         formId: "1badffb2-5eb3-407c-8c89-79bb020e1f89"
                     });
                 </script>
-            </div>
+                </div>
         </div>
 
-                        <div class="form-group">
-                            <label for="ville">Ville du bien</label>
-                            <input type="text" id="ville" name="ville" placeholder="Ex: Paris, Lyon, Marseille...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message / Détails de votre situation *</label>
-                            <textarea id="message" name="message" required placeholder="Décrivez-nous brièvement votre situation et vos objectifs..."></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 400;">
-                                <input type="checkbox" required style="width: auto;">
-                                <span>J'accepte d'être contacté par Pilotimmo concernant ma demande *</span>
-                            </label>
-                        </div>
-
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-                                Envoyer ma demande
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                        
             </div>
         </div>
     </section>
