@@ -204,6 +204,7 @@
   color: var(--accent);
 }
 
+
 /* ---- Animation subtile ---- */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
