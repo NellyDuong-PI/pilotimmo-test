@@ -22,6 +22,11 @@
     }
 }
 
+.contact-card {
+    width: 100%;
+    max-width: none;
+}
+
 /* ---- Bloc gauche : infos ---- */
 .contact-info {
     background: var(--white);
