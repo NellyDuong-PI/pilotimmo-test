@@ -2,12 +2,18 @@
    CONTACT PAGE DESIGN
    ============================== */
 
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
 
-/* Contact Section */
+/* ---- GRID principale ---- */
 .contact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
 }
 
 @media (max-width: 900px) {
