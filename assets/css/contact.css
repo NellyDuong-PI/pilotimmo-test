@@ -22,20 +22,18 @@
     }
 }
 
-.contact-card {
-    width: 100%;
-    max-width: none;
-}
 
 /* ---- Bloc gauche : infos ---- */
 .contact-info {
-    background: var(--white);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border-left: 6px solid var(--secondary);
-    animation: fadeInUp 0.6s ease;
+  width: 100%;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /* pour centrer le titre et le texte */
+  margin: 0 auto;
 }
+
 
 .contact-info h2 {
     margin-bottom: var(--spacing-md);
@@ -70,6 +68,49 @@
     color: var(--accent);
 }
 
+/* Les cartes en colonne unique */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;  /* pour ne pas que ça soit trop large sur grand écran */
+  margin: 0 auto;    /* centre le bloc de cartes */
+}
+
+/* Chaque carte */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  text-align: left;
+}
+
+/* Titres et textes */
+.contact-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.contact-card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.contact-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
 /* ---- Bénéfices ---- */
 .benefits {
     background: var(--light);
