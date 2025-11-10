@@ -1063,14 +1063,7 @@ footer img {
     .floating-cards {
         display: none;
     }
-    
-    .grid-3 {
-        grid-template-columns: 1fr;
-    }
-    
-    .grid-4 {
-        grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25%, 280px), 1fr));
-    }
+
     
     .process-line {
         display: none;
