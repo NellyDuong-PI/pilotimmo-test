@@ -99,7 +99,7 @@ p {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 var(--spacing-lg);
+    padding: 0 20px;
 }
 
 .section {
@@ -133,14 +133,29 @@ p {
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-.grid-4 {
-    display: grid;
-    gap: var(--spacing-md);
-    grid-template-columns: repeat(auto-fit, minmax(clamp(180px, 25%, 280px), 1fr));
+/* Grille 4 cartes */
+.grid.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-items: stretch;
 }
 }
 
 /* Mobile : une seule colonne */
+/* Responsive */
+@media (max-width: 991px) {
+  .grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .grid.grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
     .grid-4 {
         grid-template-columns: 1fr;
