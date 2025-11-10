@@ -382,7 +382,7 @@ header .logo img {
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease;
     max-width: 1000px;
